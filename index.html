@@ -12,10 +12,11 @@
 <body>
   <nav>
     <div class="bg-white">
-      <div class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+      <!-- <div class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8"> -->
+      <div class="container py-5 mx-auto">
         <div class="relative flex items-center justify-between">
           <a href="/" aria-label="Company" title="Company" class="inline-flex items-center">
-            <img src='./Assests/Assetlogo.png' class="w-1/6 rounded-full h-1/6" />
+            <img src='./Assests/Assetlogo.png' class="w-1/6 h-1/6" />
 
           </a>
           <ul class="flex items-center hidden space-x-8 lg:flex font-semibold  text-[20px]">
@@ -25,9 +26,10 @@
             </li>
             <li>
               <a href="/" aria-label="Our product" title="Our product"
-                class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400 text-nowrap">About Us</a>
+                class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400 text-nowrap">About
+                Us</a>
             </li>
-           
+
             <li>
               <a href="/" aria-label="Approval" title="Approval"
                 class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400">Approval</a>
@@ -122,86 +124,97 @@
   </nav>
 
   <div class="flex items-center h-screen bg-gray-50">
-    <section class="w-full h-full py-48 bg-center bg-cover" style="
-    background-image: url('./Assests/Homepage.png');
+    <section class="w-full h-full bg-center bg-cover" style="
+  background-image: url('./Assests/Homepage.png');
 ">
-
-      <div class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+      <div class="">
         <div class="container mx-auto text-left ">
           <div class="flex items-center">
-            <div class="w-1/2">
-              <p class="mb-6 text-[76px] font-bold capitalize ">LANDMARK <span class="">LIVINGS</span> </p>
+            <div class="w-1/2 py-8">
+              <p class="text-[76px] font-bold capitalize text-[#143d5b] ">LANDMARK <br /> <span class="text-wrap">LIVINGS</span> </p>
               <h6 class=" text-[#85BF73] text-[28px] font-medium">Shaping Dreams, Crafting Realities</h6>
-              <p class="mb-12 text-[24px] ">
-                Find your perfect plot and build your dreams from the ground up. Here’s our curated plots for your future home. Find the perfect canvas for your aspirations start your journey with us today.
+              <p class="mb-12 mt-12 text-[24px] ">
+                Find your perfect plot and build your dreams from the ground up. Here’s our curated plots for your
+                future home. Find the perfect canvas for your aspirations start your journey with us today.
               </p>
               <a href="#"
-                class=" text- align-middle select-none font-sans font-semibold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none text-[24px]"
-                type="button">Vist us</a>
+                class="text-[24px] text-center align-middle select-none font-sans font-semibold uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none py-3 px-16 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
+                type="button">Visit us</a>
             </div>
           </div>
         </div>
       </div>
 
-    </section>
   </div>
 
-  <section class="px-36">
+
+
+
+  </section>
+  <section class="">
     <div class="my-6 font-[sans-serif]">
-      <div class="max-w-3xl mx-auto mb-12 text-center mb-">
+      <div class="py-8 mx-auto mb-12 text-center">
         <h2 class="text-[52px] font-semibold">Villa Plots in Trichy a Far-sighted Investment</h2>
         <!-- <p class="text-sm text-[#333] mt-4 leading-relaxed">Veniam proident aute magna anim excepteur et ex consectetur velit ullamco veniam minim aute sit. Elit occaecat officia et laboris Lorem minim. Officia do aliqua adipisicing ullamco in</p> -->
       </div>
       <div class="grid gap-6 mx-auto md:grid-cols-3">
         <div
-          class="max-w-[350px] h-auto sm:p-8 p-4 rounded-md mx-auto shadow-[0_2px_22px_-4px_rgba(93,96,127,0.2)] bg-white relative">
-          <div class="flex flex-wrap justify-between mt-2 items-">
-            <div class="">
-              <p class="text-[24px] text-[#878787] font-semibold">Stable investment opportunity</p>
-
+          class="max-w-[450px] h-auto sm:p-8 p-4 rounded-3xl mx-auto shadow-[0_2px_22px_-4px_rgba(93,96,127,0.2)] bg-white relative hover:bg-[#739cbf] group">
+          <div class="flex items-center justify-between mt-2">
+            <div>
+              <p class="text-[24px] text-[#464646] font-semibold group-hover:text-white">
+                Stable investment<br />opportunity
+              </p>
             </div>
-
-            <img src='https://readymadeui.com/profile_4.webp' class="w-10 h-10 rounded-full" />
+            <div>
+              <img src='https://readymadeui.com/profile_4.webp' class="w-10 h-10 rounded-full group-hover:opacity-75" />
+            </div>
           </div>
-          <p class="text-[22px] text-center text-[##878787] leading-relaxed">Land is a stable, tangible investment that retains
-            value over time, offering financial security and stability </p>
-
+          <p class="text-[22px] text-[#878787] mt-3 text-justify group-hover:text-white">
+            Land is a stable, tangible investment that retains value over time, offering financial security and stability.
+          </p>
         </div>
+        
         <div
-          class="max-w-[350px] h-auto sm:p-8 p-4 rounded-md mx-auto shadow-[0_2px_22px_-4px_rgba(93,96,127,0.2)] bg-white relative">
-          <div class="flex flex-wrap justify-between mt-2 items-">
-            <div class="">
-              <p class="text-[24px] text-[#878787] font-semibold">An additional source of passive income</p>
-
+          class="max-w-[450px] h-auto sm:p-8 p-4 rounded-3xl mx-auto shadow-[0_2px_22px_-4px_rgba(93,96,127,0.2)] bg-white hover:bg-[#739cbf] group">
+          <div class="flex items-center justify-between mt-2">
+            <div>
+              <p class="text-[24px] text-[#464646] font-semibold group-hover:text-white">
+                An additional source of <br />passive income
+              </p>
             </div>
-
-            <img src='https://readymadeui.com/profile_4.webp' class="w-10 h-10 rounded-full" />
+            <div>
+              <img src='https://readymadeui.com/profile_4.webp' class="w-10 h-10 rounded-full group-hover:opacity-75" />
+            </div>
           </div>
-          <p class="text-[22px] text-center text-[##878787] leading-relaxed">Renting out homes on the land can bring in extra
-            money without much effort, helping you stay financially secure. </p>
-
+          <p class="text-[22px] text-justify text-[#878787] mt-3 group-hover:text-white">
+            Renting out homes on the land can bring in extra money without much effort, helping you stay financially secure.
+          </p>
         </div>
+        
         <div
-          class="max-w-[350px] h-auto sm:p-8 p-4 rounded-md mx-auto shadow-[0_2px_22px_-4px_rgba(93,96,127,0.2)] bg-white relative">
-          <div class="flex flex-wrap justify-between mt-2 items-">
-            <div class="">
-              <p class="text-[24px] text-[#878787] font-semibold">Guarantee
-                the profitfitability</p>
-
+          class="max-w-[450px] h-auto sm:p-8 p-4 rounded-3xl mx-auto shadow-[0_2px_22px_-4px_rgba(93,96,127,0.2)] bg-white hover:bg-[#739cbf] group">
+          <div class="flex items-center justify-between mt-2">
+            <div>
+              <p class="text-[24px] text-[#464646] font-semibold group-hover:text-white">
+                Guarantee <br />the profitability
+              </p>
             </div>
-
-            <img src='https://readymadeui.com/profile_4.webp' class="w-10 h-10 rounded-full" />
+            <div>
+              <img src='https://readymadeui.com/profile_4.webp' class="w-10 h-10 rounded-full group-hover:opacity-75" />
+            </div>
           </div>
-          <p class="text-[22px] text-center text-[##878787] leading-relaxed">Residential property values usually go up over
-            time, especially in popular areas. </p>
-
+          <p class="text-[22px] text-justify text-[#878787] mt-3 group-hover:text-white">
+            Residential property values usually go up over time, especially in popular areas.
+          </p>
         </div>
       </div>
+      
   </section>
 
 
   <section>
-    <div class="grid grid-cols-2">
+    <div class="grid grid-cols-2 gap-6 py-24">
       <div>
         <img class="w-full h-full py-48 bg-center bg-cover rounded-r-full rounded-bl-3xl" style="
              background-image: url('https://res.cloudinary.com/dc6wggob7/image/upload/v1724088073/Homepage_Empty_land_2_q4zpx0.png');
@@ -229,7 +242,7 @@
           <div class="flex justify-between gap-4">
             <div class="text-sm text-center text-[#333] leading-relaxed">
               <p class="text-[54px] text-[#F5841A]"> 15 Minutes</p>
-              <p class ="font-medium text-[24px]">to intergrated to bus terminal</p>
+              <p class="font-medium text-[24px]">to intergrated to bus terminal</p>
             </div>
             <div class="flex flex-wrap items-center justify-center ">
               <img src='https://readymadeui.com/profile_2.webp' class="w-10 h-10 rounded-full" />
@@ -241,7 +254,7 @@
           <div class="flex justify-between gap-4">
             <div class="text-sm text-center text-[#333] leading-relaxed">
               <p class="text-[54px] text-[#F5841A]"> 20 Minutes</p>
-              <p class ="font-medium text-[24px]">to International Airport</p>
+              <p class="font-medium text-[24px]">to International Airport</p>
             </div>
             <div class="flex flex-wrap items-center justify-center ">
               <img src='https://readymadeui.com/profile_2.webp' class="w-10 h-10 rounded-full" />
@@ -253,7 +266,7 @@
           <div class="flex justify-between gap-4">
             <div class="text-sm text-center text-[#333] leading-relaxed">
               <p class="text-[54px] text-[#F5841A]"> 20 Minutes</p>
-              <p class ="font-medium text-[24px]">to Railway Station</p>
+              <p class="font-medium text-[24px]">to Railway Station</p>
             </div>
             <div class="flex flex-wrap items-center justify-center ">
               <img src='https://readymadeui.com/profile_2.webp' class="w-10 h-10 rounded-full" />
@@ -434,15 +447,15 @@
 
   <div class="flex items-center justify-center my-10 space-x-4 ">
     <div class="flex text-[49px] bg-[#E0FFD7] text-[#323232] p-4 rounded-full gap-3">
-        We are just one call away   <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24">
-          <path fill="currentColor"
-            d="M19.95 21q-3.125 0-6.175-1.362t-5.55-3.863t-3.862-5.55T3 4.05q0-.45.3-.75t.75-.3H8.1q.35 0 .625.238t.325.562l.65 3.5q.05.4-.025.675T9.4 8.45L6.975 10.9q.5.925 1.187 1.787t1.513 1.663q.775.775 1.625 1.438T13.1 17l2.35-2.35q.225-.225.588-.337t.712-.063l3.45.7q.35.1.575.363T21 15.9v4.05q0 .45-.3.75t-.75.3" />
-        </svg> <span class="text-[58px] "> +91 99402 60601</span>
+      We are just one call away <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24">
+        <path fill="currentColor"
+          d="M19.95 21q-3.125 0-6.175-1.362t-5.55-3.863t-3.862-5.55T3 4.05q0-.45.3-.75t.75-.3H8.1q.35 0 .625.238t.325.562l.65 3.5q.05.4-.025.675T9.4 8.45L6.975 10.9q.5.925 1.187 1.787t1.513 1.663q.775.775 1.625 1.438T13.1 17l2.35-2.35q.225-.225.588-.337t.712-.063l3.45.7q.35.1.575.363T21 15.9v4.05q0 .45-.3.75t-.75.3" />
+      </svg> <span class="text-[58px] "> +91 99402 60601</span>
     </div>
   </div>
 
-  
-  
+
+
 
   <div>
     <hr class="border-t-2 border-[#85BF73] my-2" />
