@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Secure Investments</title>
+    <title>Real Estate Landing</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50">
+<body class="font-sans bg-gray-100">
+
     <nav>
         <div class="bg-white">
           <!-- <div class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8"> -->
@@ -119,37 +120,67 @@
           </div>
         </div>
       </nav>
-    
+
 
     <!-- Hero Section -->
-    <section class="relative">
-        <img src="https://via.placeholder.com/1920x600" alt="Background Image" class="w-full h-[400px] object-cover">
-        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
-            <div class="text-center text-white">
-                <h1 class="text-4xl font-bold">Secure Investments</h1>
-                <p class="mt-2 text-lg">RERA and DTCP Approved Plots by Landmark Livings</p>
+    <section class="relative h-screen bg-center bg-cover" style="background-image: url('path_to_your_background_image.jpg')">
+        <div class="absolute inset-0 flex flex-col items-center justify-center bg-white bg-opacity-60">
+            <div class="text-center">
+                <!-- House Drawing -->
+                <div class="relative">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <svg class="w-full h-full" viewBox="0 0 100 100">
+                            <!-- Insert your house SVG here -->
+                        </svg>
+                    </div>
+                    <!-- Family Image -->
+                    <img src="path_to_family_image.jpg" alt="Family" class="relative z-10 h-auto max-w-full" />
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Content Section -->
-    <section class="py-12 bg-white">
-        <div class="container grid grid-cols-1 gap-8 px-4 mx-auto md:grid-cols-2">
-            <!-- Card 1 -->
-            <div class="p-6 bg-gray-100 rounded-lg shadow-lg">
-                <img src="https://via.placeholder.com/600x400" alt="RERA" class="object-cover w-full h-56 mb-4 rounded-md">
-                <h3 class="mb-2 text-xl font-bold">Empowering Confidence: RERA-Approved Plots</h3>
-                <a href="./rera.html" class="text-blue-600 hover:underline">View to know more</a>
+    <!-- Projects Section -->
+    <section class="py-16 bg-white">
+        <div class="container px-4 mx-auto">
+            <!-- Ongoing Project -->
+            <div class="mb-12">
+                <h2 class="mb-6 text-3xl font-bold">Ongoing Project</h2>
+                <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+                    <div class="relative overflow-hidden bg-white rounded-lg shadow-lg">
+                        <img src="path_to_elite_project_image.jpg" alt="Elite Project" class="object-cover w-full h-64">
+                        <div class="p-6">
+                            <h3 class="mb-2 text-xl font-semibold">Elite</h3>
+                            <p class="text-2xl font-bold text-green-600">₹6 Lakhs onwards</p>
+                            <p class="mt-2 text-gray-500">Trichy - Madurai Highway</p>
+                            <a href="#" class="inline-block px-6 py-2 mt-4 text-white bg-green-500 rounded-lg">Know More</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- Card 2 -->
-            <div class="p-6 bg-gray-100 rounded-lg shadow-lg">
-                <img src="https://via.placeholder.com/600x400" alt="DTCP" class="object-cover w-full h-56 mb-4 rounded-md">
-                <h3 class="mb-2 text-xl font-bold">Assured Excellence: DTCP-Approved Plots</h3>
-                <a href="#" class="text-blue-600 hover:underline">View to know more</a>
+
+            <!-- Upcoming Projects -->
+            <div class="mb-12">
+                <h2 class="mb-6 text-3xl font-bold">Upcoming Projects</h2>
+                <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+                    <!-- Musiri Project -->
+                    <div class="relative overflow-hidden bg-white rounded-lg shadow-lg">
+                        <img src="path_to_musiri_project_image.jpg" alt="Musiri" class="object-cover w-full h-64">
+                        <div class="p-6">
+                            <h3 class="mb-2 text-xl font-semibold">Musiri</h3>
+                        </div>
+                    </div>
+                    <!-- Gundur Project -->
+                    <div class="relative overflow-hidden bg-white rounded-lg shadow-lg">
+                        <img src="path_to_gundur_project_image.jpg" alt="Gundur" class="object-cover w-full h-64">
+                        <div class="p-6">
+                            <h3 class="mb-2 text-xl font-semibold">Gundur</h3>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-
 
     <footer class="bg-white">
         <div class="max-w-screen-xl px-4 py-16 mx-auto space-y-8 sm:px-6 lg:space-y-16 lg:px-8">
