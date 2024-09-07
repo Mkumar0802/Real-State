@@ -127,11 +127,11 @@
         <div class="container flex flex-col items-center justify-between mx-auto md:flex-row">
             <!-- Text Section -->
             <div class="md:w-1/2">
-                <h2 class="text-xl font-semibold text-green-500">Economy | Efficiency | Effectiveness</h2>
+                <h2 class="text-xl font-semibold text-[#85BF73]">Economy | Efficiency | Effectiveness</h2>
                 <h1 class="mt-2 text-3xl font-bold text-gray-800">About Our Platform</h1>
                 <p class="mt-4 text-gray-600">Landmark Livings is a plots selling platform focused on delivering a seamless and efficient experience for buyers. Our services simplify land transactions, ensuring transparency, security, and convenience at every step.</p>
                 <button class="px-6 py-2 mt-6 text-white bg-black rounded">Join With Us</button>
-            </div>
+            </div>s
             <!-- Image Section -->
             <div class="flex justify-center mt-8 md:w-1/2 md:mt-0">
                 <img src="https://res.cloudinary.com/dc6wggob7/image/upload/v1724776895/image_88_wjmehs.png" alt="Family with house model" class="w-full h-auto rounded-lg shadow-lg">
@@ -161,7 +161,7 @@
                     <img src="https://res.cloudinary.com/dc6wggob7/image/upload/v1724778678/image_101_gtwkjo.png" alt="Vision Image" class="object-cover w-full h-48 rounded-t-lg">
                     <div class="">
                         <h2 class="p-1 text-2xl font-bold text-white bg-[#323232]  ">VISION</h2>
-                        <p class="text-white bg-[#85bf73] py-10 rounded-b-xl">Making land ownership easy to fulfill dreams transforming land buying for a brighter future.</p>
+                        <p class="text-white bg-[#85bf73] py-10 rounded-b-xl ">Making land ownership easy to fulfill dreams transforming land buying for a brighter future.</p>
                     </div>
                 </div>
 
@@ -170,7 +170,7 @@
                     <img src="https://res.cloudinary.com/dc6wggob7/image/upload/v1724778678/image_101_gtwkjo.png" alt="Mission Image" class="object-cover w-full h-48 rounded-t-lg">
                     <div class="">
                         <h2 class="p-1 text-2xl font-bold text-white bg-[#323232] ">MISSION</h2>
-                        <p class="text-white bg-[#85bf73] py-10 rounded-b-xl">Our goal is to help families live happily in affordable and accessible homes.</p>
+                        <p class="text-white bg-[#85bf73] py-10 rounded-b-xl ">Our goal is to help families live happily in affordable and accessible homes.</p>
                     </div>
                 </div>
 
@@ -179,52 +179,202 @@
                     <img src="https://res.cloudinary.com/dc6wggob7/image/upload/v1724778678/image_101_gtwkjo.png" alt="Values Image" class="object-cover w-full h-48 rounded-t-lg">
                     <div class="rounded-b-3xl">
                         <h2 class="p-1 text-2xl font-bold text-white bg-[#323232] ">VALUES</h2>
-                        <p class="text-white bg-[#85bf73] py-10 rounded-b-xl ">We prioritize transparency in all our processes and ensure users are well-informed at every stage.</p>
+                        <p class="text-white bg-[#85bf73] py-10 rounded-b-xl">We prioritize transparency in  our processes and ensure users are well-informed at every stage.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Customer Testimonials Section -->
-    <section class="py-16 bg-gray-50">
-        <div class="container mx-auto text-center">
-            <h2 class="mb-8 text-3xl font-bold">Here from our customers</h2>
-            <div class="grid gap-8 md:grid-cols-4">
+
+
+
+<!-- Customer Testimonials Section -->
+<section class="py-16 bg-gray-50" x-data="testimonialSlider()">
+    <div class="container mx-auto text-center">
+        <h2 class="mb-8 text-3xl font-bold">Hear from our customers</h2>
+        <div class="relative overflow-hidden">
+            <!-- Testimonial Wrapper -->
+        <div class="relative overflow-hidden">
+          <div class="flex transition-transform duration-500 ease-in-out" :style="`transform: translateX(-${activeTestimonial * 100}%);`">
+                  
+            
                 <!-- Testimonial 1 -->
-                <div class="p-6 bg-white rounded-lg shadow-lg">
-                    <img src="https://res.cloudinary.com/dc6wggob7/image/upload/v1724778501/photo-1724296532350-4b8d63cd6559_nlp7kh.jpg" alt="Customer 1" class="w-20 h-20 mx-auto mb-4 rounded-full">
-                    <p class="text-gray-600">"This is a customer quote. The customer is going to share their opinion about our product or service."</p>
-                    <h3 class="mt-4 font-semibold">S.Bhavana</h3>
-                    <p class="text-yellow-500">★★★★★</p>
+                <div class="flex-shrink-0 min-w-full p-6 bg-white rounded-lg shadow-lg">
+                  <section class="bg-white">
+                    <div class="max-w-screen-xl px-4 py-12 mx-auto sm:px-6 lg:px-8 lg:py-16">
+                      <!-- <h2 class="text-4xl font-bold tracking-tight text-center text-gray-900 sm:text-5xl">
+                        Read trusted reviews from our customers
+                      </h2> -->
+                  
+                      <div class="grid grid-cols-1 gap-4 mt-8 md:grid-cols-3 md:gap-8">
+                        <blockquote class="p-6 rounded-lg shadow-sm bg-gray-50 sm:p-8">
+                          <div class="flex items-center gap-4">
+                            <img
+                              alt=""
+                              src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
+                              class="object-cover rounded-full size-14"
+                            />
+                  
+                            <div>
+                              <div class="flex justify-center gap-0.5 text-yellow-500">
+                                <p class="text-yellow-500">★★★★★</p>
+                              </div>
+                  
+                              <p class="mt-0.5 text-lg font-medium text-gray-900">S.Bhawna</p>
+                            </div>
+                          </div>
+                  
+                          <p class="mt-4 text-gray-700">
+                            “This is a customer quote.The customer is going to share their opinion about our product or service, hopefully it’s going to be a positive one.The social proof section is important when you want to increase trust and trustworthiness of your company with your website visitors”
+                          </p>
+                        </blockquote>
+                  
+                        <blockquote class="p-6 rounded-lg shadow-sm bg-gray-50 sm:p-8">
+                          <div class="flex items-center gap-4">
+                            <img
+                              alt=""
+                              src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
+                              class="object-cover rounded-full size-14"
+                            />
+                  
+                            <div>
+                              <div class="flex justify-center gap-0.5 text-yellow-500">
+                                <p class="text-yellow-500">★★★★★</p>
+                              </div>
+                  
+                              <p class="mt-0.5 text-lg font-medium text-gray-900">B.Deepak</p>
+                            </div>
+                          </div>
+                  
+                          <p class="mt-4 text-gray-700">
+                            “This is a customer quote.The customer is going to share their opinion about our product or service, hopefully it’s going to be a positive one.The social proof section is important when you want to increase trust and trustworthiness of your company with your website visitors”
+                          </p>
+                        </blockquote>
+                  
+                        <blockquote class="p-6 rounded-lg shadow-sm bg-gray-50 sm:p-8">
+                          <div class="flex items-center gap-4">
+                            <img
+                              alt=""
+                              src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
+                              class="object-cover rounded-full size-14"
+                            />
+                  
+                            <div>
+                              <div class="flex justify-center gap-0.5 text-yellow-500">
+                                <p class="text-yellow-500">★★★★★</p>
+                              </div>
+                  
+                              <p class="mt-0.5 text-lg font-medium text-gray-900">S.Archana</p>
+                            </div>
+                          </div>
+                  
+                          <p class="mt-4 text-gray-700">
+                            “This is a customer quote.The customer is going to share their opinion about our product or service, hopefully it’s going to be a positive one.The social proof section is important when you want to increase trust and trustworthiness of your company with your website visitors”
+                          </p>
+                        </blockquote>
+                      </div>
+                    </div>
+                  </section>
                 </div>
 
                 <!-- Testimonial 2 -->
-                <div class="p-6 bg-white rounded-lg shadow-lg">
-                    <img src="https://res.cloudinary.com/dc6wggob7/image/upload/v1724778501/photo-1724296532350-4b8d63cd6559_nlp7kh.jpg" alt="Customer 2" class="w-20 h-20 mx-auto mb-4 rounded-full">
-                    <p class="text-gray-600">"This is a customer quote. The customer is going to share their opinion about our product or service."</p>
-                    <h3 class="mt-4 font-semibold">A.R.Ashwin</h3>
-                    <p class="text-yellow-500">★★★★★</p>
+                <div class="flex-shrink-0 min-w-full p-6 bg-white rounded-lg shadow-lg">
+                  <section class="bg-white">
+                    <div class="max-w-screen-xl px-4 py-12 mx-auto sm:px-6 lg:px-8 lg:py-16">
+                      <!-- <h2 class="text-4xl font-bold tracking-tight text-center text-gray-900 sm:text-5xl">
+                        Read trusted reviews from our customers
+                      </h2> -->
+                  
+                      <div class="grid grid-cols-1 gap-4 mt-8 md:grid-cols-3 md:gap-8">
+                        <blockquote class="p-6 rounded-lg shadow-sm bg-gray-50 sm:p-8">
+                          <div class="flex items-center gap-4">
+                            <img
+                              alt=""
+                              src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
+                              class="object-cover rounded-full size-14"
+                            />
+                  
+                            <div>
+                              <div class="flex justify-center gap-0.5 text-yellow-500">
+                                <p class="text-yellow-500">★★★★★</p>
+                              </div>
+                  
+                              <p class="mt-0.5 text-lg font-medium text-gray-900">S.Bhawna</p>
+                            </div>
+                          </div>
+                  
+                          <p class="mt-4 text-gray-700">
+                            “This is a customer quote.The customer is going to share their opinion about our product or service, hopefully it’s going to be a positive one.The social proof section is important when you want to increase trust and trustworthiness of your company with your website visitors”
+                          </p>
+                        </blockquote>
+                  
+                        <blockquote class="p-6 rounded-lg shadow-sm bg-gray-50 sm:p-8">
+                          <div class="flex items-center gap-4">
+                            <img
+                              alt=""
+                              src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
+                              class="object-cover rounded-full size-14"
+                            />
+                  
+                            <div>
+                              <div class="flex justify-center gap-0.5 text-yellow-500">
+                                <p class="text-yellow-500">★★★★★</p>
+                              </div>
+                  
+                              <p class="mt-0.5 text-lg font-medium text-gray-900">A.R.Ashwin</p>
+                            </div>
+                          </div>
+                  
+                          <p class="mt-4 text-gray-700">
+                            “This is a customer quote.The customer is going to share their opinion about our product or service, hopefully it’s going to be a positive one.The social proof section is important when you want to increase trust and trustworthiness of your company with your website visitors”
+                          </p>
+                        </blockquote>
+                  
+                        <blockquote class="p-6 rounded-lg shadow-sm bg-gray-50 sm:p-8">
+                          <div class="flex items-center gap-4">
+                            <img
+                              alt=""
+                              src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
+                              class="object-cover rounded-full size-14"
+                            />
+                  
+                            <div>
+                              <div class="flex justify-center gap-0.5 text-yellow-500">
+                                <p class="text-yellow-500">★★★★★</p>
+                              </div>
+                  
+                              <p class="mt-0.5 text-lg font-medium text-gray-900">B.Deepak</p>
+                            </div>
+                          </div>
+                  
+                          <p class="mt-4 text-gray-700">
+                            “This is a customer quote.The customer is going to share their opinion about our product or service, hopefully it’s going to be a positive one.The social proof section is important when you want to increase trust and trustworthiness of your company with your website visitors”
+                          </p>
+                        </blockquote>
+                      </div>
+                    </div>
+                  </section>
                 </div>
 
-                <!-- Testimonial 3 -->
-                <div class="p-6 bg-white rounded-lg shadow-lg">
-                    <img src="https://res.cloudinary.com/dc6wggob7/image/upload/v1724778501/photo-1724296532350-4b8d63cd6559_nlp7kh.jpg" alt="Customer 3" class="w-20 h-20 mx-auto mb-4 rounded-full">
-                    <p class="text-gray-600">"This is a customer quote. The customer is going to share their opinion about our product or service."</p>
-                    <h3 class="mt-4 font-semibold">B.Deepak</h3>
-                    <p class="text-yellow-500">★★★★★</p>
-                </div>
+             
+            </div>
 
-                <!-- Testimonial 4 -->
-                <div class="p-6 bg-white rounded-lg shadow-lg">
-                    <img src="https://res.cloudinary.com/dc6wggob7/image/upload/v1724778501/photo-1724296532350-4b8d63cd6559_nlp7kh.jpg" alt=" Customer 4" class="w-20 h-20 mx-auto mb-4 rounded-full">
-                    <p class="text-gray-600">"This is a customer quote. The customer is going to share their opinion about our product or service."</p>
-                    <h3 class="mt-4 font-semibold">S.Archana</h3>
-                    <p class="text-yellow-500">★★★★★</p>
-                </div>
+            <!-- Navigation Buttons -->
+            <div class="absolute inset-0 flex items-center justify-between">
+                <button @click="prev" class="px-4 py-2 text-white bg-gray-800 rounded-full focus:outline-none">❮</button>
+                <button @click="next" class="px-4 py-2 text-white bg-gray-800 rounded-full focus:outline-none">❯</button>
+            </div>
+
+            <!-- Dots for Navigation -->
+            <div class="flex justify-center mt-6 space-x-2">
+                <template x-for="(testimonial, index) in testimonials" :key="index">
+                    <button @click="goTo(index)" class="w-4 h-4 rounded-full" :class="{'bg-yellow-500': activeTestimonial === index, 'bg-gray-300': activeTestimonial !== index}"></button>
+                </template>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
      <!-- FAQ Section -->
@@ -240,7 +390,8 @@
                     <span x-show="open" class="text-2xl">-</span>
                 </button>
                 <div x-show="open" x-transition class="mt-2 text-gray-600">
-                    <p>Landmark Livings provides an excellent opportunity to own a plot of land with great amenities, security, and a promising location for future growth.</p>
+                  <p class="text-yellow-500">★★★★★</p>
+                  <p>Landmark Livings offers a friendly community vibe with green spaces, recreational facilities, and top-notch security, ensuring a safe and enjoyable environment for families.</p>
                 </div>
             </div>
 
@@ -252,7 +403,7 @@
                     <span x-show="open" class="text-2xl">-</span>
                 </button>
                 <div x-show="open" x-transition class="mt-2 text-gray-600">
-                    <p>The plots come with access to amenities such as water supply, electricity, security, and well-maintained infrastructure.</p>
+                    <p> Gated entrances, CCTV surveillance, and trained security personnel ensure a safe environment.</p>
                 </div>
             </div>
 
@@ -264,7 +415,7 @@
                     <span x-show="open" class="text-2xl">-</span>
                 </button>
                 <div x-show="open" x-transition class="mt-2 text-gray-600">
-                    <p>Yes, we provide full support with legal documentation and procedures, ensuring a smooth and transparent buying experience.</p>
+                    <p>Yes, we offer complete support for legal and documentation requirements during plot purchase, ensuring a smooth and transparent process for our customers.</p>
                 </div>
             </div>
 
@@ -276,7 +427,7 @@
                     <span x-show="open" class="text-2xl">-</span>
                 </button>
                 <div x-show="open" x-transition class="mt-2 text-gray-600">
-                    <p>You can schedule a site visit by contacting our sales team. We'll arrange a convenient time for you to visit and inspect the plots.</p>
+                    <p>You can schedule a site visit by contacting our customer service team through phone or email for assistance and booking arrangements..</p>
                 </div>
             </div>
 
@@ -288,7 +439,8 @@
                     <span x-show="open" class="text-2xl">-</span>
                 </button>
                 <div x-show="open" x-transition class="mt-2 text-gray-600">
-                    <p>We offer flexible financing options through various banking partners. Our team will guide you through the available financing plans to suit your needs.</p>
+                    <p>We offer diverse financing options such as installment plans, and customized payment schedules to facilitate plot purchases at Landmark Livings. Contact our team for more details and assistance.
+                    </p>
                 </div>
             </div>
 
@@ -300,14 +452,14 @@
                     <span x-show="open" class="text-2xl">-</span>
                 </button>
                 <div x-show="open" x-transition class="mt-2 text-gray-600">
-                    <p>We offer a wide variety of residential and commercial plots tailored to suit different needs and preferences.</p>
+                    <p>On our website, you can find residential, commercial, and mixed-use plots available at Landmark Livings, each tailored for different investment and development needs.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <footer class="bg-white">
-      <div class="max-w-screen-2xl px-4 py-16 mx-auto space-y-8 sm:px-6 lg:space-y-16 lg:px-8">
+      <div class="px-4 py-16 mx-auto space-y-8 max-w-screen-2xl sm:px-6 lg:space-y-16 lg:px-8">
         <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
             <div class="text-teal-600">
@@ -488,6 +640,30 @@
       </div>
     </footer>
     
-
+    <script>
+      function testimonialSlider() {
+          return {
+              testimonials: [1, 2], // Assuming 4 testimonials
+              activeTestimonial: 0, // Start at first testimonial
+  
+              init() {
+                  // Automatically trigger the next() function every 3 seconds
+                  setInterval(() => {
+                      this.next();
+                  }, 3000);
+              },
+  
+              next() {
+                  this.activeTestimonial = (this.activeTestimonial + 1) % this.testimonials.length;
+              },
+              prev() {
+                  this.activeTestimonial = (this.activeTestimonial - 1 + this.testimonials.length) % this.testimonials.length;
+              },
+              goTo(index) {
+                  this.activeTestimonial = index;
+              },
+          };
+      }
+  </script>
 </body>
 </html>
