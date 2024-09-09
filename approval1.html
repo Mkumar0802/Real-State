@@ -4,7 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landmark Livings Elite</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwindcss.css"></script>
+    <style>
+      /* Style for the container */
+      .image-container {
+        position: relative;
+        width: 100%;
+        max-width: 800px; /* Adjust as needed */
+        margin: auto;
+      }
+  
+      /* Style for the image */
+      .image {
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+      }
+  
+      /* Fullscreen overlay */
+      .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+      }
+  
+      /* Zoomed image inside overlay */
+      .overlay img {
+        max-width: 90%;
+        max-height: 90%;
+      }
+  
+      /* Close button */
+      .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
+      }
+    </style>
 </head>
 <body class="text-gray-800 bg-gray-50">
     <nav>
@@ -143,6 +190,14 @@
             <img src="https://res.cloudinary.com/dc6wggob7/image/upload/v1725037953/Desktop_-_2_o8ibfy.png" alt="Plot Map" class="w-4/5">
         </div>
     </section>
+
+  <!-- Fullscreen overlay for zoom effect -->
+  <div id="overlay" class="overlay">
+    <span id="closeBtn" class="close-btn">&times;</span>
+    <img id="fullImage" src="" alt="Zoomed Image">
+  </div>
+
+
     <section class="container py-12 mx-auto">
         <div class="flex justify-center">
             <img src="https://res.cloudinary.com/dc6wggob7/image/upload/v1725698081/Desktop_-_4_ffo3dt.png" alt="Plot Map" class="">
@@ -533,6 +588,32 @@
     window.onload = function() {
         animateValue("running-number", 0, 30000, 3000);
     };
+</script>
+
+<script>
+  // Get elements
+  const zoomableImage = document.getElementById('zoomableImage');
+  const overlay = document.getElementById('overlay');
+  const fullImage = document.getElementById('fullImage');
+  const closeBtn = document.getElementById('closeBtn');
+
+  // Open the overlay and display the zoomed image
+  zoomableImage.addEventListener('click', () => {
+    overlay.style.display = 'flex';
+    fullImage.src = zoomableImage.src;
+  });
+
+  // Close the overlay when close button is clicked
+  closeBtn.addEventListener('click', () => {
+    overlay.style.display = 'none';
+  });
+
+  // Close the overlay when clicked outside the image
+  overlay.addEventListener('click', (event) => {
+    if (event.target === overlay) {
+      overlay.style.display = 'none';
+    }
+  });
 </script>
 
 </body>

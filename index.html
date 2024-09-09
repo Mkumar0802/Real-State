@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- <link href="./src/output.css" rel="stylesheet" /> -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./tailwindcss.css"></script>
   <title>Landmark Living | Home</title>
   <style>
     .custom-shadow {
@@ -15,136 +15,24 @@
 </head>
 
 <body>
-  <nav>
-    <div class="bg-white">
-      <!-- <div class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8"> -->
-      <div class="container   py-5 mx-auto">
-        <div class="relative flex items-center justify-between">
-          <a href="/" aria-label="Company" title="Company" class="inline-flex items-center">
-            <img src='./Assests/Assetlogo.png' class="w-1/6 h-1/6" />
-
-          </a>
-          <ul class="flex items-center  space-x-8 lg:flex font-semibold  text-[20px]">
-            <li>
-              <a href="/" aria-label="Home" title="Home"
-                class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400">Home</a>
-            </li>
-            <li>
-              <a href="/about.html" aria-label="Our product" title="Our product"
-                class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400 text-nowrap">About
-                Us</a>
-            </li>
-
-            <li>
-              <a href="./approval.html" aria-label="Approval" title="Approval"
-                class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400">Approval</a>
-            </li>
-            <li>
-              <a href="./project.html" aria-label="Projects" title="Projects"
-                class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400">Projects</a>
-            </li>
-            <li>
-              <a href="/contact.html" aria-label="Projects" title="Projects"
-                class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400">Contact</a>
-            </li>
-            <!-- <li 
-              class="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
-  type="button">
-              
-                <a
-                  href="/"
-                
-                 
-                  aria-label="Sign up"
-                  title="Reach out to us"
-              
-                >
-                 Reach out to us
-                </a>
-              </li> -->
-          </ul>
-          <!-- Mobile menu -->
-          <div class="lg:hidden">
-            <button aria-label="Open Menu" title="Open Menu"
-              class="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline">
-              <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z">
-                </path>
-                <path fill="currentColor" d="M23,6H1C0.4,6,0,5.6,0,5s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,6,23,6z"></path>
-                <path fill="currentColor" d="M23,20H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,20,23,20z">
-                </path>
-              </svg>
-            </button>
-            <!-- Mobile menu dropdown
-                  <div class="absolute top-0 left-0 w-full">
-                    <div class="p-5 bg-white border rounded shadow-sm">
-                      <div class="flex items-center justify-between mb-4">
-                        <div>
-                          <a href="/" aria-label="Company" title="Company" class="inline-flex items-center">
-                            <svg class="w-8 text-deep-purple-accent-400" viewBox="0 0 24 24" stroke-linejoin="round" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" stroke="currentColor" fill="none">
-                              <rect x="3" y="1" width="7" height="12"></rect>
-                              <rect x="3" y="17" width="7" height="6"></rect>
-                              <rect x="14" y="1" width="7" height="6"></rect>
-                              <rect x="14" y="11" width="7" height="12"></rect>
-                            </svg>
-                            <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">Company</span>
-                          </a>
-                        </div>
-                        <div>
-                          <button aria-label="Close Menu" title="Close Menu" class="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
-                            <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
-                              <path
-                                fill="currentColor"
-                                d="M19.7,4.3c-0.4-0.4-1-0.4-1.4,0L12,10.6L5.7,4.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l6.3,6.3l-6.3,6.3 c-0.4,0.4-0.4,1,0,1.4C4.5,19.9,4.7,20,5,20s0.5-0.1,0.7-0.3l6.3-6.3l6.3,6.3c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3 c0.4-0.4,0.4-1,0-1.4L13.4,12l6.3-6.3C20.1,5.3,20.1,4.7,19.7,4.3z"
-                              ></path>
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-                      <nav>
-                        <ul class="space-y-4">
-                          <li><a href="/" aria-label="Our product" title="Our product" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">Product</a></li>
-                          <li><a href="/" aria-label="Our product" title="Our product" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">Features</a></li>
-                          <li><a href="/" aria-label="Product pricing" title="Product pricing" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">Pricing</a></li>
-                          <li><a href="/" aria-label="About us" title="About us" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">About us</a></li>
-                          <li>
-                            <a
-                              href="/"
-                              class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                              aria-label="Sign up"
-                              title="Sign up"
-                            >
-                              Sign up
-                            </a>
-                          </li>
-                        </ul>
-                      </nav>
-                    </div>
-                  </div>
-                  -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </nav>
-
+ 
   <div class="flex items-center h-screen bg-gray-50">
     <section class="w-full h-full bg-center bg-cover" style="
   background-image: url('./Assests/Homepage.png');
 ">
       <div class="">
-        <div class=" xl:container xl:mx-auto text-left ">
+        <div class="grid-cols-1 text-left geid lg:px-16 xl:container xl:mx-auto">
           <div class="flex items-center">
             <div class="w-1/2 py-8">
-              <p class="text-[76px] font-bold capitalize text-[#143d5b] ">LANDMARK <br /> <span
+              <p class="xl:text-[76px] lg:text-[58px] sl:text-2xl font-bold capitalize text-[#143d5b] ">LANDMARK <br /> <span
                   class="text-wrap">LIVINGS</span> </p>
-              <h6 class=" text-[#85BF73] text-[28px] font-medium">Shaping Dreams, Crafting Realities</h6>
-              <p class="mb-12 mt-12 text-[24px] ">
+              <h6 class=" text-[#85BF73] xl:text-[28px] lg:text-[20px] text-3xl font-medium">Shaping Dreams, Crafting Realities</h6>
+              <p class="mb-12 mt-12 xl:text-[24px] lg:text-[20px]">
                 Find your perfect plot and build your dreams from the ground up. Here’s our curated plots for your
                 future home. Find the perfect canvas for your aspirations start your journey with us today.
               </p>
               <a href="#"
-                class="text-[24px] text-center align-middle select-none font-sans font-semibold uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none py-3 px-16 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
+                class="xl:text-[24px] lg:text-[20px] text-xl  text-center align-middle select-none font-sans font-semibold uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none py-3 px-16 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
                 type="button">Visit us</a>
             </div>
           </div>
@@ -159,16 +47,16 @@
   </section>
   <section class="">
     <div class="my-6 font-[sans-serif]">
-      <div class="py-8 mx-auto mb-12 text-center">
-        <h2 class="text-[52px] font-semibold">Villa Plots in Trichy a Far-sighted Investment</h2>
+      <div class="px-5 py-8 mx-auto mb-12 text-center">
+        <h2 class="xl:text-[52px] lg:text-[40px] text-xl  font-semibold">Villa Plots in Trichy a Far-sighted Investment</h2>
         <!-- <p class="text-sm text-[#333] mt-4 leading-relaxed">Veniam proident aute magna anim excepteur et ex consectetur velit ullamco veniam minim aute sit. Elit occaecat officia et laboris Lorem minim. Officia do aliqua adipisicing ullamco in</p> -->
       </div>
-      <div class="grid gap-6 mx-auto md:grid-cols-3">
+      <div class="grid gap-6 px-5 mx-auto md:grid-cols-3 lg:px-16">
         <div
           class="max-w-[450px] h-auto sm:p-8 p-4 rounded-3xl mx-auto shadow-[0_2px_22px_-4px_rgba(93,96,127,0.2)] bg-white relative hover:bg-[#739cbf] group">
           <div class="flex items-center justify-between mt-2">
             <div>
-              <p class="text-[24px] text-[#464646] font-semibold group-hover:text-white">
+              <p class="xl:text-[24px] lg:text-[20px]    text-[#464646] font-semibold group-hover:text-white">
                 Stable investment<br />opportunity
               </p>
             </div>
@@ -176,7 +64,7 @@
               <img src='https://readymadeui.com/profile_4.webp' class="w-10 h-10 rounded-full group-hover:opacity-75" />
             </div>
           </div>
-          <p class="text-[22px] text-[#878787] mt-3 text-justify group-hover:text-white">
+          <p class="xl:text-[22px] lg:text-[18px]   text-[#878787] mt-3 text-justify group-hover:text-white">
             Land is a stable, tangible investment that retains value over time, offering financial security and
             stability.
           </p>
@@ -186,7 +74,7 @@
           class="max-w-[450px] h-auto sm:p-8 p-4 rounded-3xl mx-auto shadow-[0_2px_22px_-4px_rgba(93,96,127,0.2)] bg-white hover:bg-[#739cbf] group">
           <div class="flex items-center justify-between mt-2">
             <div>
-              <p class="text-[24px] text-[#464646] font-semibold group-hover:text-white">
+              <p class="text-[24px] lg:text-[20px]  text-[#464646] font-semibold group-hover:text-white">
                 An additional source of <br />passive income
               </p>
             </div>
@@ -194,7 +82,7 @@
               <img src='https://readymadeui.com/profile_4.webp' class="w-10 h-10 rounded-full group-hover:opacity-75" />
             </div>
           </div>
-          <p class="text-[22px] text-justify text-[#878787] mt-3 group-hover:text-white">
+          <p class="xl:text-[22px] lg:text-[18px] text-justify text-[#878787] mt-3 group-hover:text-white">
             Renting out homes on the land can bring in extra money without much effort, helping you stay financially
             secure.
           </p>
@@ -204,7 +92,7 @@
           class="max-w-[450px] h-auto sm:p-8 p-4 rounded-3xl mx-auto shadow-[0_2px_22px_-4px_rgba(93,96,127,0.2)] bg-white hover:bg-[#739cbf] group">
           <div class="flex items-center justify-between mt-2">
             <div>
-              <p class="text-[24px] text-[#464646] font-semibold group-hover:text-white">
+              <p class="text-[24px] lg:text-[20px]  text-[#464646] font-semibold group-hover:text-white">
                 Guarantee <br />the profitability
               </p>
             </div>
@@ -212,7 +100,7 @@
               <img src='https://readymadeui.com/profile_4.webp' class="w-10 h-10 rounded-full group-hover:opacity-75" />
             </div>
           </div>
-          <p class="text-[22px] text-justify text-[#878787] mt-3 group-hover:text-white">
+          <p class="xl:text-[22px] lg:text-[18px]  text-justify text-[#878787] mt-3 group-hover:text-white">
             Residential property values usually go up over time, especially in popular areas.
           </p>
         </div>
@@ -241,15 +129,15 @@
   <section class="">
     <div class="my-6 font-[sans-serif]">
       <div class="max-w-4xl mx-auto mb-12 text-center mb-">
-        <h2 class="text-[52px] font-semibold">Book Your Plot Near to Everywhere</h2>
+        <h2 class="xl:text-[52px] lg:text-[40px] text-xl  font-semibold">Book Your Plot Near to Everywhere</h2>
         <!-- <p class="text-sm text-[#333] mt-4 leading-relaxed">Veniam proident aute magna anim excepteur et ex consectetur velit ullamco veniam minim aute sit. Elit occaecat officia et laboris Lorem minim. Officia do aliqua adipisicing ullamco in</p> -->
       </div>
-      <div class="grid gap-6 mx-auto md:grid-cols-3">
+      <div class="grid gap-6 px-5 mx-auto md:grid-cols-3">
         <div
           class="max-w-[480px] h-auto sm:p-8 p-4 rounded-md mx-auto shadow-[0_2px_22px_-4px_rgba(93,96,127,0.2)] bg-white relative">
           <div class="flex justify-between gap-8">
             <div class="text-sm text-center text-[#333] leading-relaxed">
-              <p class="text-[54px] text-[#F5841A]"> 15 Minutes</p>
+              <p class="lg:text-[54px] text-xl  text-[#F5841A]"> 15 Minutes</p>
               <p class="font-medium text-[24px]">to intergrated to bus terminal</p>
             </div>
             <div class="flex flex-wrap items-center justify-center ">
@@ -265,7 +153,7 @@
           class="max-w-[480px] h-auto sm:p-8 p-4 rounded-md mx-auto shadow-[0_2px_22px_-4px_rgba(93,96,127,0.2)] bg-white relative">
           <div class="flex justify-between gap-8">
             <div class="text-sm text-center text-[#333] leading-relaxed">
-              <p class="text-[54px] text-[#F5841A]"> 20 Minutes</p>
+              <p class="lg:text-[54px] text-xl text-[#F5841A]"> 20 Minutes</p>
               <p class="font-medium text-[24px]">to International Airport</p>
             </div>
             <div class="flex flex-wrap items-center justify-center mt-4 ">
@@ -280,7 +168,7 @@
           class="max-w-[480px] h-auto sm:p-8 p-4 rounded-md mx-auto shadow-[0_2px_22px_-4px_rgba(93,96,127,0.2)] bg-white relative">
           <div class="flex justify-between gap-8">
             <div class="text-sm text-center text-[#333] leading-relaxed">
-              <p class="text-[54px] text-[#F5841A]"> 20 Minutes</p>
+              <p class="lg:text-[54px] text-xl text-[#F5841A]"> 20 Minutes</p>
               <p class="font-medium text-[24px]">to intergrated to bus terminal</p>
             </div>
             <div class="flex flex-wrap items-center justify-center ">
@@ -298,35 +186,35 @@
 
   <section>
     <div class="flex justify-center">
-      <h2 class="text-[52px] font-semibold">Experience  </h2>
+      <h2 class="xl:text-[52px] lg:text-[40px] text-xl  font-semibold">Experience  </h2>
     </div>
     <div class="flex justify-center">
-      <h2 class="text-[52px] font-semibold">
+      <h2 class="xl:text-[52px] lg:text-[40px] text-xl font-semibold">
         The Security Of Natural Surroundings </h2>
     </div>
     <div class="container p-4 mx-auto">
       <div class="flex justify-center">
-        <h2 class="text-[52px] font-semibold">Amenities</h2>
+        <h2 class="xl:text-[52px] lg:text-[40px] text-xl  font-semibold">Amenities</h2>
       </div>
       <div class="gap-4 ">
-        <div class="grid grid-cols-3 gap-5 ">
+        <div class="grid grid-cols-2 gap-5 lg:grid-cols-3">
           <div>
             <div class="col-span-2 gap-5 space-y-5">
               <div>
                 <!-- CCTV camera -->
                 <div class="p-4 bg-white border-2 border-solid rounded-3xl border-[#85BF73]">
-                  <h3 class="mx-20 mt-2 text-xl font-semibold">CCTV camera</h3>
-                  <p class="mx-20 py-4">Protected area and video surveillance</p>
+                  <h3 class="mt-2 text-xl font-semibold lg:mx-20">CCTV camera</h3>
+                  <p class="py-4 lg:mx-20">Protected area and video surveillance</p>
                   <img
                     src="https://res.cloudinary.com/dc6wggob7/image/upload/v1724342716/Security_camera_with_a_glass_building_on_the_background-2_tnnvl1.png"
-                    alt="CCTV camera" class="object-contain w-full  rounded" width="479" height="367">
+                    alt="CCTV camera" class="object-contain w-full rounded" width="479" height="367">
                 </div>
               </div>
               <div>
                 <!-- Concrete Roads -->
                 <div class="p-4 bg-white border-2 border-solid rounded-3xl border-[#739CBF]">
-                  <h3 class="mx-20 mt-2 text-xl font-semibold">Concrete Roads</h3>
-                  <p class="mx-20 py-4">Durable concrete roads for convenience</p>
+                  <h3 class="mt-2 text-xl font-semibold lg:mx-20">Concrete Roads</h3>
+                  <p class="py-4 lg:mx-20">Durable concrete roads for convenience</p>
                   <img
                   src="https://res.cloudinary.com/dc6wggob7/image/upload/v1724342717/Security_camera_with_a_glass_building_on_the_background_1_ye1ekj.png"
                   alt="Concrete Roads" class="object-cover w-full h-full rounded" width="454" height="664">
@@ -340,8 +228,8 @@
               <div>
                 <!-- Gate -->
                 <div class="p-4 bg-white border-2 border-solid rounded-3xl border-[#739CBF]">
-                  <h3 class="mx-20 mt-2 text-xl font-semibold">Gate</h3>
-                  <p class="mx-20 py-4">Enjoy a safe and residential environment</p>
+                  <h3 class="mt-2 text-xl font-semibold lg:mx-20">Gate</h3>
+                  <p class="py-4 lg:mx-20">Enjoy a safe and residential environment</p>
                   <img
                     src="https://res.cloudinary.com/dc6wggob7/image/upload/v1724342717/Security_camera_with_a_glass_building_on_the_background_pgqdls.png"
                     alt="Gate" class="object-cover w-full h-full rounded">
@@ -349,31 +237,31 @@
               </div>
               <div>
                 <div class="p-4 bg-white border-2 border-solid rounded-3xl border-[#85BF73]">
-                  <h3 class="mx-20 mt-2 text-xl font-semibold">Bus Facility</h3>
-                  <p class="mx-20 py-4">24/7 bus facility accessible</p>
+                  <h3 class="mt-2 text-xl font-semibold lg:mx-20">Bus Facility</h3>
+                  <p class="py-4 lg:mx-20">24/7 bus facility accessible</p>
                   <img
                     src="https://res.cloudinary.com/dc6wggob7/image/upload/v1724342717/Security_camera_with_a_glass_building_on_the_background-3_tp6tua.png"
-                    alt="Bus Facility" class="object-contain w-full  rounded" >
+                    alt="Bus Facility" class="object-contain w-full rounded" >
                 </div>
               </div>
             </div>
           </div>
           <div>
-            <div class="col-span-2 gap-5 space-y-5">
+            <div class="gap-5 space-y-5 lg:col-span-2">
               <div>
                 <div class="p-4 bg-white border-2 border-solid rounded-3xl border-[#85BF73]">
-                  <h3 class="mx-20 mt-2 text-xl font-semibold">Street Lights</h3>
-                  <p class="mx-20 py-4">Safe pathways with plot streetlights</p>
+                  <h3 class="mt-2 text-xl font-semibold lg:mx-20">Street Lights</h3>
+                  <p class="py-4 lg:mx-20">Safe pathways with plot streetlights</p>
                     <img
                       src="https://res.cloudinary.com/dc6wggob7/image/upload/v1724343384/Security_camera_with_a_glass_building_on_the_background_2_rin0ba.png"
-                      alt="Street Lights" class="object-contain w-full   rounded">
+                      alt="Street Lights" class="object-contain w-full rounded">
                 </div>
               </div>
               <div>
                 <!-- Play Area -->
                 <div class="p-4 bg-white border-2 border-solid rounded-3xl border-[#739CBF]">
-                  <h3 class="mx-20 mt-2 text-xl font-semibold">Play Area</h3>
-                  <p class="mx-20 py-4">Kids' play zone for joyful experiences</p>
+                  <h3 class="mt-2 text-xl font-semibold lg:mx-20">Play Area</h3>
+                  <p class="py-4 lg:mx-20">Kids' play zone for joyful experiences</p>
                   <img
                     src="https://res.cloudinary.com/dc6wggob7/image/upload/v1724342717/Security_camera_with_a_glass_building_on_the_background-1_r7ktrj.png"
                     alt="Play Area" class="object-cover w-full h-full rounded">
@@ -481,10 +369,10 @@
   <section>
     <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
       <div class="mx-auto mb-12 text-center mb-">
-        <h2 class="text-[64px] font-semibold">What Makes Trichy a Perfect Choice</h2>
+        <h2 class="xl:text-[52px] lg:text-[40px] text-xl font-semibold">What Makes Trichy a Perfect Choice</h2>
         <!-- <p class="text-sm text-[#333] mt-4 leading-relaxed">Veniam proident aute magna anim excepteur et ex consectetur velit ullamco veniam minim aute sit. Elit occaecat officia et laboris Lorem minim. Officia do aliqua adipisicing ullamco in</p> -->
       </div>
-      <div class="grid row-gap-8 sm:row-gap-0 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="grid grid-cols-2 row-gap-8 sm:row-gap-0 lg:grid-cols-3">
         <div class="p-8 border-b sm:border-r">
           <div class="max-w-md text-center">
             <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full sm:w-16 sm:h-16">
@@ -590,11 +478,11 @@
 
   <div class="flex items-center justify-center my-10 space-x-4">
     <div
-      class="flex text-[49px] bg-[#E0FFD7] text-[#323232] p-8 rounded-full gap-3  shadow-[0px_10px_1px_rgba(221,_221,_221,_1),_0_10px_20px_rgba(204,_204,_204,_1)] ">
+      class="flex lg:text-[49px] bg-[#E0FFD7] text-[#323232] p-8 rounded-full gap-3  shadow-[0px_10px_1px_rgba(221,_221,_221,_1),_0_10px_20px_rgba(204,_204,_204,_1)] ">
       We are just one call away <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24">
         <path fill="currentColor"
           d="M19.95 21q-3.125 0-6.175-1.362t-5.55-3.863t-3.862-5.55T3 4.05q0-.45.3-.75t.75-.3H8.1q.35 0 .625.238t.325.562l.65 3.5q.05.4-.025.675T9.4 8.45L6.975 10.9q.5.925 1.187 1.787t1.513 1.663q.775.775 1.625 1.438T13.1 17l2.35-2.35q.225-.225.588-.337t.712-.063l3.45.7q.35.1.575.363T21 15.9v4.05q0 .45-.3.75t-.75.3" />
-      </svg> <span class="text-[58px] "> +91 99402 60601</span>
+      </svg> <span class="lg:text-[58px] "> +91 99402 60601</span>
     </div>
   </div>
 
@@ -607,7 +495,7 @@
 
 
   <footer class="bg-white">
-    <div class="max-w-screen-2xl px-4 py-16 mx-auto space-y-8 sm:px-6 lg:space-y-16 lg:px-8">
+    <div class="px-4 py-16 mx-auto space-y-8 max-w-screen-2xl sm:px-6 lg:space-y-16 lg:px-8">
       <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
         <div>
           <div class="text-teal-600">
