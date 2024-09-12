@@ -174,12 +174,12 @@
           <div class="px-40 py-24 text-white rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-10">
               <h1 class="text-xl font-medium">Your Vision, Our Space</h1>
               <p class="mt-4">
-                  <span id="running-number" class="text-6xl text-[#F5841A]">0</span>
-                  <span class="text-6xl">Sq.ft</span>
+                  <span id="running-number" class="lg:text-6xl text-[#F5841A]">0</span>
+                  <span class="lg:text-6xl">Sq.ft</span>
                   <br/>
-                  <span class="text-4xl">of Developed Plot</span>
+                  <span class="lg:text-4xl">of Developed Plot</span>
               </p>
-              <a href="#" class="inline-block px-6 py-3 mt-6 font-semibold text-black bg-white rounded-lg">Choose Plots</a>
+              <a href="#" class="inline-block lg:px-6 lg:py-3   px-8   py-2  mt-6 font-semibold text-black bg-white rounded-lg">Choose Plots</a>
           </div>
       </div>
     </section>
@@ -205,8 +205,8 @@
     </section>
 
 
-    <div class="container mx-auto">
-      <div class="grid grid-cols-6 gap-4">
+    <div class="container mx-auto  p-8 lg:px-24 px-8">
+      <div class="grid lg:grid-cols-5  grid-cols-3    gap-4">
         <!-- Row 1 -->
         <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">01<br>689 Sq.ft</div>
         <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">02<br>689 Sq.ft</div>
@@ -325,24 +325,28 @@
       
     </section>
 
-    <!-- Gallery Section -->
-    <section class="container py-12 mx-auto">
-        <h2 class="mb-8 text-3xl font-bold text-center">Gallery</h2>
-        <div class="flex justify-center space-x-4">
-            <img src="https://res.cloudinary.com/dc6wggob7/image/upload/v1725038531/pexels-cottonbro-4430308_ilwhrh.jpg" alt="Gallery Image 1" class="w-1/4">
-            <img src="https://res.cloudinary.com/dc6wggob7/image/upload/v1725038531/pexels-cottonbro-4430308_ilwhrh.jpg" alt="Gallery Image 2" class="w-1/4">
-            <img src="https://res.cloudinary.com/dc6wggob7/image/upload/v1725038531/pexels-cottonbro-4430308_ilwhrh.jpg" alt="Gallery Image 3" class="w-1/4">
-            <img src="https://res.cloudinary.com/dc6wggob7/image/upload/v1725038531/pexels-cottonbro-4430308_ilwhrh.jpg" alt="Gallery Image 4" class="w-1/4">
-        </div>
-    </section>
+<!-- Gallery Section -->
+<section class="container py-12 mx-auto p-8 lg:px-24 px-8">
+  <h2 class="mb-8 text-3xl font-bold text-center">Gallery</h2>
+
+  <!-- Responsive Grid -->
+  <div class="grid grid-cols-2 lg:grid-cols-3  xl:grid-cols-5  gap-4">
+      <img src="https://res.cloudinary.com/dc6wggob7/image/upload/v1725038531/pexels-cottonbro-4430308_ilwhrh.jpg" alt="Gallery Image 1" class="w-full h-auto object-cover">
+      <img src="https://res.cloudinary.com/dc6wggob7/image/upload/v1725038531/pexels-cottonbro-4430308_ilwhrh.jpg" alt="Gallery Image 2" class="w-full h-auto object-cover">
+      <img src="https://res.cloudinary.com/dc6wggob7/image/upload/v1725038531/pexels-cottonbro-4430308_ilwhrh.jpg" alt="Gallery Image 3" class="w-full h-auto object-cover">
+      <img src="https://res.cloudinary.com/dc6wggob7/image/upload/v1725038531/pexels-cottonbro-4430308_ilwhrh.jpg" alt="Gallery Image 4" class="w-full h-auto object-cover">
+      <img src="https://res.cloudinary.com/dc6wggob7/image/upload/v1725038531/pexels-cottonbro-4430308_ilwhrh.jpg" alt="Gallery Image 5" class="w-full h-auto object-cover">
+  </div>
+</section>
+
 
    
-   <div class="container py-12 mx-auto">
+   <div class="container py-12  mx-auto  p-8 lg:px-24 px-8">
     <div class="grid grid-cols-1 gap-36 lg:grid-cols-2">
         <!-- Map Section -->
         <div>
 
-          <div class="relative pt-[56.25%]">
+          <div class="relative pt-[56.25%] lg:w-full lg:h-full">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d9060.412279455617!2d78.57712653162152!3d10.652517084813246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTDCsDM4JzU5LjAiTiA3OMKwMzQnNTMuMiJF!5e0!3m2!1sen!2sin!4v1725696745311!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
               width="600" height="450" class="absolute inset-0 w-full h-full border-0 rounded-md" allowfullscreen=""
@@ -353,7 +357,7 @@
         <!-- Form Section -->
         <div>
 
-          <div class="px-16 ">
+          <div class="">
             <h2 class="mb-4 text-2xl font-bold">Schedule a Site Visit</h2>
             <p class="mb-6 text-gray-600">
               Interested in visiting our plots? Please provide your details below, and our team will contact you to
