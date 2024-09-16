@@ -1,175 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landmark Livings Elite</title>
-    <script src="./tailwindcss.css"></script>
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <style>
-      /* Style for the container */
-      .image-container {
-        position: relative;
-        width: 100%;
-        max-width: 800px; /* Adjust as needed */
-        margin: auto;
-      }
-  
-      /* Style for the image */
-      .image {
-        width: 100%;
-        height: auto;
-        cursor: pointer;
-        transition: transform 0.3s ease-in-out;
-      }
-  
-      /* Fullscreen overlay */
-      .overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.9);
-        justify-content: center;
-        align-items: center;
-        z-index: 1000;
-      }
-  
-      /* Zoomed image inside overlay */
-      .overlay img {
-        max-width: 90%;
-        max-height: 90%;
-      }
-  
-      /* Close button */
-      .close-btn {
-        position: absolute;
-        top: 20px;
-        right: 40px;
-        font-size: 40px;
-        color: white;
-        cursor: pointer;
-      }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landmark Livings Elite</title>
+  <script src="./tailwindcss.css"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <style>
+    /* Style for the container */
+    .image-container {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      /* Adjust as needed */
+      margin: auto;
+    }
+
+    /* Style for the image */
+    .image {
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    /* Fullscreen overlay */
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    /* Zoomed image inside overlay */
+    .overlay img {
+      max-width: 90%;
+      max-height: 90%;
+    }
+
+    /* Close button */
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
 </head>
+
 <body class="text-gray-800 bg-gray-50">
-    
+
   <nav>
     <div class="bg-white">
-        <div class="container py-5 mx-auto">
-            <div class="relative flex items-center justify-between">
-                <a href="/" aria-label="Company" title="Company" class="inline-flex items-center">
-                    <img src='./Assests/Assetlogo.png' class="w-1/6 h-1/6" />
-                </a>
-                
-                <!-- Desktop Menu -->
-                <ul class="flex items-center hidden space-x-8 lg:flex font-semibold text-[20px]">
-                    <li>
-                        <a href="/" aria-label="Home" title="Home"
-                            class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400">Home</a>
-                    </li>
-                    <li>
-                      <a href="/about.html" aria-label="Our product" title="Our product"
-                        class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400 text-nowrap">About
-                        Us</a>
-                    </li>
-                    <li>
-                        <a href="./approval.html" aria-label="Approval" title="Approval"
-                            class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400">Approval</a>
-                    </li>
-                    <li>
-                        <a href="./project.html" aria-label="Projects" title="Projects"
-                            class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400">Projects</a>
-                    </li>
-                    <li>
-                        <a href="/contact.html" aria-label="Projects" title="Projects"
-                            class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400">Contact</a>
-                    </li>
-                </ul>
+      <div class="container py-5 mx-auto">
+        <div class="relative flex items-center justify-between">
+          <a href="/" aria-label="Company" title="Company" class="inline-flex items-center">
+            <img src='./Assests/Assetlogo.png' class="w-1/6 h-1/6" />
+          </a>
 
-                <!-- Mobile Menu Button -->
-                <div class="lg:hidden" x-data="{ open: false }">
-                    <button @click="open = !open" aria-label="Open Menu" title="Open Menu"
-                        class="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline">
-                        <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z">
-                            </path>
-                            <path fill="currentColor"
-                                d="M23,6H1C0.4,6,0,5.6,0,5s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,6,23,6z">
-                            </path>
-                            <path fill="currentColor"
-                                d="M23,20H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,20,23,20z">
-                            </path>
-                        </svg>
+          <!-- Desktop Menu -->
+          <ul class="flex items-center hidden space-x-8 lg:flex font-semibold text-[20px]">
+            <li>
+              <a href="/" aria-label="Home" title="Home"
+                class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400">Home</a>
+            </li>
+            <li>
+              <a href="/about.html" aria-label="Our product" title="Our product"
+                class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400 text-nowrap">About
+                Us</a>
+            </li>
+            <li>
+              <a href="./approval.html" aria-label="Approval" title="Approval"
+                class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400">Approval</a>
+            </li>
+            <li>
+              <a href="./project.html" aria-label="Projects" title="Projects"
+                class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400">Projects</a>
+            </li>
+            <li>
+              <a href="/contact.html" aria-label="Projects" title="Projects"
+                class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400">Contact</a>
+            </li>
+          </ul>
+          <!-- Mobile Menu Button -->
+          <div class="lg:hidden" x-data="{ open: false }">
+            <button @click="open = !open" aria-label="Open Menu" title="Open Menu"
+              class="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline">
+              <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z">
+                </path>
+                <path fill="currentColor" d="M23,6H1C0.4,6,0,5.6,0,5s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,6,23,6z">
+                </path>
+                <path fill="currentColor" d="M23,20H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,20,23,20z">
+                </path>
+              </svg>
+            </button>
+
+            <!-- Mobile Menu Dropdown -->
+            <div x-show="open" @click.away="open = false" x-transition class="absolute top-0 left-0 w-full z-50">
+              <div class="p-5 bg-white border rounded shadow-sm">
+                <div class="flex items-center justify-between mb-4">
+                  <div>
+                    <a href="/" aria-label="Company" title="Company" class="inline-flex items-center">
+                      <img src='./Assests/Assetlogo.png' class="xl:w-1/6 :h-1/6  w-4/12 " />
+                    </a>
+                  </div>
+                  <div>
+                    <button @click="open = false" aria-label="Close Menu" title="Close Menu"
+                      class="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+                      <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                          d="M19.7,4.3c-0.4-0.4-1-0.4-1.4,0L12,10.6L5.7,4.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l6.3,6.3l-6.3,6.3 c-0.4,0.4-0.4,1,0,1.4C4.5,19.9,4.7,20,5,20s0.5-0.1,0.7-0.3l6.3-6.3l6.3,6.3c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3 c0.4-0.4,0.4-1,0-1.4L13.4,12l6.3-6.3C20.1,5.3,20.1,4.7,19.7,4.3z">
+                        </path>
+                      </svg>
                     </button>
-
-                    <!-- Mobile Menu Dropdown -->
-                    <div x-show="open" @click.away="open = false" x-transition class="absolute top-0 left-0 w-full">
-                        <div class="p-5 bg-white border rounded shadow-sm">
-                            <div class="flex items-center justify-between mb-4">
-                                <div>
-                                    <a href="/" aria-label="Company" title="Company" class="inline-flex items-center">
-                                        <img src='./Assests/Assetlogo.png' class="w-1/6 h-1/6" />
-                                    </a>
-                                </div>
-                                <div>
-                                    <button @click="open = false" aria-label="Close Menu" title="Close Menu"
-                                        class="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
-                                        <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
-                                            <path fill="currentColor"
-                                                d="M19.7,4.3c-0.4-0.4-1-0.4-1.4,0L12,10.6L5.7,4.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l6.3,6.3l-6.3,6.3 c-0.4,0.4-0.4,1,0,1.4C4.5,19.9,4.7,20,5,20s0.5-0.1,0.7-0.3l6.3-6.3l6.3,6.3c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3 c0.4-0.4,0.4-1,0-1.4L13.4,12l6.3-6.3C20.1,5.3,20.1,4.7,19.7,4.3z">
-                                            </path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <nav>
-                                <ul class="space-y-4">
-                                    <li><a href="/" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-teal-500">Home</a></li>
-                                    <li><a href="/about.html" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-teal-500">About Us</a></li>
-                                    <li><a href="./approval.html" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-teal-500">Approval</a></li>
-                                    <li><a href="./project.html" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-teal-500">Projects</a></li>
-                                    <li><a href="/contact.html" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-teal-500">Contact</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
+                  </div>
                 </div>
-
+                <nav>
+                  <ul class="space-y-4">
+                    <li><a href="/"
+                        class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-teal-500">Home</a>
+                    </li>
+                    <li><a href="/about.html"
+                        class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-teal-500">About
+                        Us</a></li>
+                    <li><a href="./approval.html"
+                        class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-teal-500">Approval</a>
+                    </li>
+                    <li><a href="./project.html"
+                        class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-teal-500">Projects</a>
+                    </li>
+                    <li><a href="/contact.html"
+                        class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-teal-500">Contact</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
             </div>
-        </div>
-    </div>
-</nav>
-
-
-
-
-    <!-- Hero Section -->
-    <section class="relative bg-cover bg-center h-[750px]" style="background-image: url('https://res.cloudinary.com/dc6wggob7/image/upload/v1725036782/2366_2_q12kgy.png');">
-        <div class=""></div>
-        <div class="flex items-center justify-center h-full text-center">
-          <div class="px-40 py-24 text-white rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-10">
-              <h1 class="text-xl font-medium">Your Vision, Our Space</h1>
-              <p class="mt-4">
-                  <span id="running-number" class="lg:text-6xl text-[#F5841A]">0</span>
-                  <span class="lg:text-6xl">Sq.ft</span>
-                  <br/>
-                  <span class="lg:text-4xl">of Developed Plot</span>
-              </p>
-              <a href="#" class="inline-block lg:px-6 lg:py-3   px-8   py-2  mt-6 font-semibold text-black bg-white rounded-lg">Choose Plots</a>
           </div>
-      </div>
-    </section>
 
-    <!-- Plot Map Section -->
-    <section class="container py-12 mx-auto">
-        <div class="flex justify-center">
-            <img src="https://res.cloudinary.com/dc6wggob7/image/upload/v1725037953/Desktop_-_2_o8ibfy.png" alt="Plot Map" class="w-4/5">
         </div>
-    </section>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+  <!-- Hero Section -->
+  <section class="relative z-10   bg-cover bg-center h-[750px]"
+    style="background-image: url('https://res.cloudinary.com/dc6wggob7/image/upload/v1725036782/2366_2_q12kgy.png');">
+    <div class=""></div>
+    <div class="flex items-center justify-center h-full text-center">
+      <div class="px-40 py-24 text-white rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-10">
+        <h1 class="text-2xl font-medium">Your Vision, Our Space</h1>
+        <p class="mt-4">
+          <span id="running-number" class="lg:text-6xl text-3xl font-bold text-[#F5841A]">0</span>
+          <span class="lg:text-6xl text-2xl font-semibold">Sq.ft</span>
+          <br />
+          <span class="lg:text-4xl text-2xl">of Developed Plot</span>
+        </p>
+        <a href="#"
+          class="inline-block lg:px-6 lg:py-3   px-8   py-2  mt-6 font-semibold text-black bg-white rounded-lg">Choose
+          Plots</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plot Map Section -->
+  <section class="container py-12 mx-auto">
+    <div class="flex justify-center">
+      <img src="https://res.cloudinary.com/dc6wggob7/image/upload/v1725037953/Desktop_-_2_o8ibfy.png" alt="Plot Map"
+        class="w-4/5">
+    </div>
+  </section>
 
   <!-- Fullscreen overlay for zoom effect -->
   <div id="overlay" class="overlay">
@@ -178,201 +191,210 @@
   </div>
 
 
-    <section class="container py-12 mx-auto">
-        <div class="flex justify-center">
-            <img src="https://res.cloudinary.com/dc6wggob7/image/upload/v1725698081/Desktop_-_4_ffo3dt.png" alt="Plot Map" class="">
-        </div>
-    </section>
+  <section class="container py-12 mx-auto">
+    <div class="flex justify-center">
+      <img src="https://res.cloudinary.com/dc6wggob7/image/upload/v1725698081/Desktop_-_4_ffo3dt.png" alt="Plot Map"
+        class="">
+    </div>
+  </section>
 
 
-    <div class="container mx-auto  p-8 lg:px-24 px-8">
-      <div class="grid lg:grid-cols-5  grid-cols-3    gap-4">
-        <!-- Row 1 -->
-        <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">01<br>689 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">02<br>689 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">03<br>678 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">04<br>1500 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">05<br>1500 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">06<br>1500 Sq.ft</div>
-    
-        <!-- Row 2 -->
-        <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">07<br>1738 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">08<br>1713 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">09<br>1500 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">10<br>1500 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">11<br>1608 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">12<br>1500 Sq.ft</div>
-    
-        <!-- Row 3 -->
-        <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">13<br>1500 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">14<br>1500 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">15<br>1500 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">16<br>1500 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">17<br>2003 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">18<br>1500 Sq.ft</div>
-    
-        <!-- Row 4 -->
-        <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">19<br>1500 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">20<br>1500 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">21<br>1500 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">22<br>1500 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">23<br>1500 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">24<br>1500 Sq.ft</div>
-    
-        <!-- Row 5 -->
-        <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">25<br>1500 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">26<br>1712 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">27<br>1735 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">28<br>1500 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">29<br>1500 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">30<br>1500 Sq.ft</div>
-    
-        <!-- Row 6 -->
-        <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">31<br>661 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">32<br>638 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">33<br>622 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">34<br>621 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">35<br>610 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">36<br>1500 Sq.ft</div>
-    
-        <!-- Row 7 -->
-        <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">37<br>1500 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">38<br>1500 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">39<br>1713 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">40<br>1699 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">41<br>1500 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">42<br>1500 Sq.ft</div>
-    
-        <!-- Row 8 -->
-        <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">43<br>1500 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">44<br>1500 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">45<br>1500 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">46<br>1500 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">47<br>1500 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">48<br>1500 Sq.ft</div>
-    
-        <!-- Row 9 -->
-        <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">49<br>1000 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">50<br>1500 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">51<br>1500 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">52<br>1500 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">53<br>1500 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">54<br>1500 Sq.ft</div>
-    
-        <!-- Row 10 -->
-        <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">55<br>1500 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">56<br>1500 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">57<br>1500 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">58<br>1500 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">59<br>1700 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">60<br>1713 Sq.ft</div>
-    
-        <!-- Row 11 -->
-        <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">61<br>1500 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">62<br>1500 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">63<br>1500 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">64<br>598 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">65<br>573 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">66<br>567 Sq.ft</div>
-    
-        <!-- Row 12 -->
-        <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">67<br>611 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">68<br>641 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">69<br>708 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">70<br>644 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">71<br>832 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">72<br>746 Sq.ft</div>
-    
-        <!-- Row 13 -->
-        <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">73<br>1410 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">74<br>1354 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">75<br>1285 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">76<br>1212 Sq.ft</div>
-        <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">77<br>1469 Sq.ft</div>
-      </div>
+  <div class="container mx-auto  p-8 lg:px-24 px-8">
+    <div class="grid lg:grid-cols-5  grid-cols-3    gap-4">
+      <!-- Row 1 -->
+      <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">01<br>689 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">02<br>689 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">03<br>678 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">04<br>1500 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">05<br>1500 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">06<br>1500 Sq.ft</div>
 
+      <!-- Row 2 -->
+      <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">07<br>1738 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">08<br>1713 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">09<br>1500 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">10<br>1500 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">11<br>1608 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">12<br>1500 Sq.ft</div>
+
+      <!-- Row 3 -->
+      <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">13<br>1500 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">14<br>1500 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">15<br>1500 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">16<br>1500 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">17<br>2003 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">18<br>1500 Sq.ft</div>
+
+      <!-- Row 4 -->
+      <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">19<br>1500 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">20<br>1500 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">21<br>1500 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">22<br>1500 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">23<br>1500 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">24<br>1500 Sq.ft</div>
+
+      <!-- Row 5 -->
+      <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">25<br>1500 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">26<br>1712 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">27<br>1735 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">28<br>1500 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">29<br>1500 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">30<br>1500 Sq.ft</div>
+
+      <!-- Row 6 -->
+      <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">31<br>661 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">32<br>638 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">33<br>622 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">34<br>621 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">35<br>610 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">36<br>1500 Sq.ft</div>
+
+      <!-- Row 7 -->
+      <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">37<br>1500 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">38<br>1500 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">39<br>1713 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">40<br>1699 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">41<br>1500 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">42<br>1500 Sq.ft</div>
+
+      <!-- Row 8 -->
+      <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">43<br>1500 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">44<br>1500 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">45<br>1500 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">46<br>1500 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">47<br>1500 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">48<br>1500 Sq.ft</div>
+
+      <!-- Row 9 -->
+      <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">49<br>1000 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">50<br>1500 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">51<br>1500 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">52<br>1500 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">53<br>1500 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">54<br>1500 Sq.ft</div>
+
+      <!-- Row 10 -->
+      <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">55<br>1500 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">56<br>1500 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">57<br>1500 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">58<br>1500 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">59<br>1700 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">60<br>1713 Sq.ft</div>
+
+      <!-- Row 11 -->
+      <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">61<br>1500 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">62<br>1500 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">63<br>1500 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">64<br>598 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">65<br>573 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">66<br>567 Sq.ft</div>
+
+      <!-- Row 12 -->
+      <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">67<br>611 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">68<br>641 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">69<br>708 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">70<br>644 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">71<br>832 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">72<br>746 Sq.ft</div>
+
+      <!-- Row 13 -->
+      <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">73<br>1410 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">74<br>1354 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">75<br>1285 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-green-500 rounded-lg shadow-lg">76<br>1212 Sq.ft</div>
+      <div class="p-4 font-bold text-white bg-yellow-500 rounded-lg shadow-lg">77<br>1469 Sq.ft</div>
     </div>
 
-
-
-
-    <!-- Life Around Landmark Section -->
-    <section class="container py-12 mx-auto">
-        <h2 class="mb-8 text-3xl font-bold text-center">Life Around Landmark <br/> Livings Elite</h2>
-        <div class="flex justify-center ">
-            <img src="https://res.cloudinary.com/dc6wggob7/image/upload/v1725037954/Layer_2_dvotfl.png" alt="Landmark Livings Elite" class="w-full ">
-        </div>
-      
-    </section>
-
-<!-- Gallery Section -->
-<section class="container py-12 mx-auto p-8 lg:px-24 px-8">
-  <h2 class="mb-8 text-3xl font-bold text-center">Gallery</h2>
-
-  <!-- Responsive Grid -->
-  <div class="grid grid-cols-2 lg:grid-cols-3  xl:grid-cols-5  gap-4">
-      <img src="https://res.cloudinary.com/dc6wggob7/image/upload/v1725038531/pexels-cottonbro-4430308_ilwhrh.jpg" alt="Gallery Image 1" class="w-full h-auto object-cover">
-      <img src="https://res.cloudinary.com/dc6wggob7/image/upload/v1725038531/pexels-cottonbro-4430308_ilwhrh.jpg" alt="Gallery Image 2" class="w-full h-auto object-cover">
-      <img src="https://res.cloudinary.com/dc6wggob7/image/upload/v1725038531/pexels-cottonbro-4430308_ilwhrh.jpg" alt="Gallery Image 3" class="w-full h-auto object-cover">
-      <img src="https://res.cloudinary.com/dc6wggob7/image/upload/v1725038531/pexels-cottonbro-4430308_ilwhrh.jpg" alt="Gallery Image 4" class="w-full h-auto object-cover">
-      <img src="https://res.cloudinary.com/dc6wggob7/image/upload/v1725038531/pexels-cottonbro-4430308_ilwhrh.jpg" alt="Gallery Image 5" class="w-full h-auto object-cover">
   </div>
-</section>
 
 
-   
-   <div class="container py-12  mx-auto  p-8 lg:px-24 px-8">
-    <div class="grid grid-cols-1 gap-36 lg:grid-cols-2">
-        <!-- Map Section -->
-        <div>
-
-          <div class="relative pt-[56.25%] lg:w-full lg:h-full">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d9060.412279455617!2d78.57712653162152!3d10.652517084813246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTDCsDM4JzU5LjAiTiA3OMKwMzQnNTMuMiJF!5e0!3m2!1sen!2sin!4v1725696745311!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-              width="600" height="450" class="absolute inset-0 w-full h-full border-0 rounded-md" allowfullscreen=""
-              aria-hidden="false" tabindex="0">
-            </iframe>
-          </div>
-        </div>
-        <!-- Form Section -->
-        <div>
-
-          <div class="">
-            <h2 class="mb-4 text-2xl font-bold">Schedule a Site Visit</h2>
-            <p class="mb-6 text-gray-600">
-              Interested in visiting our plots? Please provide your details below, and our team will contact you to
-              arrange a convenient time for your site visit:
-            </p>
-            <form class="space-y-4">
-              <div>
-                <label for="name" class="block text-gray-700">Name*</label>
-                <input type="text" id="name"
-                  class="block w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-green-500 focus:border-green-500"
-                  required>
-              </div>
-              <div>
-                <label for="phone" class="block text-gray-700">Mobile Number*</label>
-                <input type="tel" id="phone"
-                  class="block w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-green-500 focus:border-green-500"
-                  required>
-              </div>
-              <button type="submit"
-                class="w-1/4 px-4 py-2 font-bold text-white bg-green-500 rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50">
-                Submit
-              </button>
-          </div>
 
 
-          
-          </form>
+  <!-- Life Around Landmark Section -->
+  <section class="container lg:py-12 py-4 mx-auto">
+    <h2 class="mb-8 text-3xl font-bold text-center">Life Around Landmark <br /> Livings Elite</h2>
+    <div class="flex justify-center ">
+      <img src="https://res.cloudinary.com/dc6wggob7/image/upload/v1725037954/Layer_2_dvotfl.png"
+        alt="Landmark Livings Elite" class="w-full ">
+    </div>
+
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="container lg:py-12  mx-auto lg:p-8 lg:px-24 px-8">
+    <h2 class="lg:mb-8 mb-4 text-3xl font-bold text-center">Gallery</h2>
+
+    <!-- Responsive Grid -->
+    <div class="grid grid-cols-2 lg:grid-cols-3  xl:grid-cols-5  gap-4">
+      <img src="https://res.cloudinary.com/dc6wggob7/image/upload/v1725038531/pexels-cottonbro-4430308_ilwhrh.jpg"
+        alt="Gallery Image 1" class="w-full h-auto object-cover">
+      <img src="https://res.cloudinary.com/dc6wggob7/image/upload/v1725038531/pexels-cottonbro-4430308_ilwhrh.jpg"
+        alt="Gallery Image 2" class="w-full h-auto object-cover">
+      <img src="https://res.cloudinary.com/dc6wggob7/image/upload/v1725038531/pexels-cottonbro-4430308_ilwhrh.jpg"
+        alt="Gallery Image 3" class="w-full h-auto object-cover">
+      <img src="https://res.cloudinary.com/dc6wggob7/image/upload/v1725038531/pexels-cottonbro-4430308_ilwhrh.jpg"
+        alt="Gallery Image 4" class="w-full h-auto object-cover">
+      <img src="https://res.cloudinary.com/dc6wggob7/image/upload/v1725038531/pexels-cottonbro-4430308_ilwhrh.jpg"
+        alt="Gallery Image 5" class="w-full h-auto object-cover">
+    </div>
+  </section>
+
+
+
+  <div class="container py-12  mx-auto  p-8 lg:px-24 px-8">
+    <div class="grid grid-cols-1 lg:gap-36 gap-6 lg:grid-cols-2">
+      <!-- Map Section -->
+      <div>
+
+        <div class="relative pt-[56.25%] lg:w-full lg:h-full">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d9060.412279455617!2d78.57712653162152!3d10.652517084813246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTDCsDM4JzU5LjAiTiA3OMKwMzQnNTMuMiJF!5e0!3m2!1sen!2sin!4v1725696745311!5m2!1sen!2sin"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" width="600" height="450"
+            class="absolute inset-0 w-full h-full border-0 rounded-md" allowfullscreen="" aria-hidden="false"
+            tabindex="0">
+          </iframe>
         </div>
       </div>
+      <!-- Form Section -->
+      <div>
 
-   </div>
-  
-   <!-- md devices -->
+        <div class="">
+          <h2 class="mb-4 text-2xl font-bold">Schedule a Site Visit</h2>
+          <p class="mb-6 text-gray-600">
+            Interested in visiting our plots? Please provide your details below, and our team will contact you to
+            arrange a convenient time for your site visit:
+          </p>
+          <form class="space-y-4">
+            <div>
+              <label for="name" class="block text-gray-700">Name*</label>
+              <input type="text" id="name"
+                class="block w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-green-500 focus:border-green-500"
+                required>
+            </div>
+            <div>
+              <label for="phone" class="block text-gray-700">Mobile Number*</label>
+              <input type="tel" id="phone"
+                class="block w-full px-4 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-green-500 focus:border-green-500"
+                required>
+            </div>
+            <button type="submit"
+              class="w-1/4 px-4 py-2 font-bold text-white bg-green-500 rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50">
+              Submit
+            </button>
+        </div>
 
-   <footer class="bg-white hidden md:block">
+
+
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- md devices -->
+
+  <footer class="bg-white hidden md:block">
     <div class="px-4 py-16 mx-auto space-y-8 max-w-screen-2xl sm:px-6 lg:space-y-16 lg:px-8">
       <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
         <div>
@@ -525,7 +547,7 @@
                   <br />Trichy - 620003</span></li>
 
               <li class="flex gap-2 ">
-                <span class ='mt-1'>
+                <span class='mt-1'>
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                     <path fill="#2A63F3"
                       d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm8-7L4 8v10h16V8zm0-2l8-5H4zM4 8V6v12z" />
@@ -589,45 +611,23 @@
               </a>
             </li>
 
+          
             <li>
               <a href="#" rel="noreferrer" target="_blank" class="text-gray-700 transition hover:opacity-75">
                 <span class="sr-only">Instagram</span>
+                <ion-icon class="text-[40px] text-[#c13584]" name="logo-instagram"></ion-icon>
 
-                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 256 256">
-                  <g fill="none">
-                    <rect width="256" height="256" fill="url(#skillIconsInstagram0)" rx="60" />
-                    <rect width="256" height="256" fill="url(#skillIconsInstagram1)" rx="60" />
-                    <path fill="#fff"
-                      d="M128.009 28c-27.158 0-30.567.119-41.233.604c-10.646.488-17.913 2.173-24.271 4.646c-6.578 2.554-12.157 5.971-17.715 11.531c-5.563 5.559-8.98 11.138-11.542 17.713c-2.48 6.36-4.167 13.63-4.646 24.271c-.477 10.667-.602 14.077-.602 41.236s.12 30.557.604 41.223c.49 10.646 2.175 17.913 4.646 24.271c2.556 6.578 5.973 12.157 11.533 17.715c5.557 5.563 11.136 8.988 17.709 11.542c6.363 2.473 13.631 4.158 24.275 4.646c10.667.485 14.073.604 41.23.604c27.161 0 30.559-.119 41.225-.604c10.646-.488 17.921-2.173 24.284-4.646c6.575-2.554 12.146-5.979 17.702-11.542c5.563-5.558 8.979-11.137 11.542-17.712c2.458-6.361 4.146-13.63 4.646-24.272c.479-10.666.604-14.066.604-41.225s-.125-30.567-.604-41.234c-.5-10.646-2.188-17.912-4.646-24.27c-2.563-6.578-5.979-12.157-11.542-17.716c-5.562-5.562-11.125-8.979-17.708-11.53c-6.375-2.474-13.646-4.16-24.292-4.647c-10.667-.485-14.063-.604-41.23-.604zm-8.971 18.021c2.663-.004 5.634 0 8.971 0c26.701 0 29.865.096 40.409.575c9.75.446 15.042 2.075 18.567 3.444c4.667 1.812 7.994 3.979 11.492 7.48c3.5 3.5 5.666 6.833 7.483 11.5c1.369 3.52 3 8.812 3.444 18.562c.479 10.542.583 13.708.583 40.396c0 26.688-.104 29.855-.583 40.396c-.446 9.75-2.075 15.042-3.444 18.563c-1.812 4.667-3.983 7.99-7.483 11.488c-3.5 3.5-6.823 5.666-11.492 7.479c-3.521 1.375-8.817 3-18.567 3.446c-10.542.479-13.708.583-40.409.583c-26.702 0-29.867-.104-40.408-.583c-9.75-.45-15.042-2.079-18.57-3.448c-4.666-1.813-8-3.979-11.5-7.479s-5.666-6.825-7.483-11.494c-1.369-3.521-3-8.813-3.444-18.563c-.479-10.542-.575-13.708-.575-40.413c0-26.704.096-29.854.575-40.396c.446-9.75 2.075-15.042 3.444-18.567c1.813-4.667 3.983-8 7.484-11.5c3.5-3.5 6.833-5.667 11.5-7.483c3.525-1.375 8.819-3 18.569-3.448c9.225-.417 12.8-.542 31.437-.563zm62.351 16.604c-6.625 0-12 5.37-12 11.996c0 6.625 5.375 12 12 12s12-5.375 12-12s-5.375-12-12-12zm-53.38 14.021c-28.36 0-51.354 22.994-51.354 51.355c0 28.361 22.994 51.344 51.354 51.344c28.361 0 51.347-22.983 51.347-51.344c0-28.36-22.988-51.355-51.349-51.355zm0 18.021c18.409 0 33.334 14.923 33.334 33.334c0 18.409-14.925 33.334-33.334 33.334c-18.41 0-33.333-14.925-33.333-33.334c0-18.411 14.923-33.334 33.333-33.334" />
-                    <defs>
-                      <radialGradient id="skillIconsInstagram0" cx="0" cy="0" r="1"
-                        gradientTransform="matrix(0 -253.715 235.975 0 68 275.717)" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#FD5" />
-                        <stop offset=".1" stop-color="#FD5" />
-                        <stop offset=".5" stop-color="#FF543E" />
-                        <stop offset="1" stop-color="#C837AB" />
-                      </radialGradient>
-                      <radialGradient id="skillIconsInstagram1" cx="0" cy="0" r="1"
-                        gradientTransform="matrix(22.25952 111.2061 -458.39518 91.75449 -42.881 18.441)"
-                        gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#3771C8" />
-                        <stop offset=".128" stop-color="#3771C8" />
-                        <stop offset="1" stop-color="#60F" stop-opacity="0" />
-                      </radialGradient>
-                    </defs>
-                  </g>
-                </svg>
               </a>
             </li>
 
           </ul>
         </div>
 
-       
+
       </div>
       <div>
         <div class="grid grid-cols-2  ">
-          
+
           <div>
             <p class="font-semibold text-gray-900 text-[22px]">Links</p>
 
@@ -667,7 +667,7 @@
                   <br />Trichy - 620003</span></li>
 
               <li class="flex gap-2 ">
-                <span class =''>
+                <span class=''>
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                     <path fill="#2A63F3"
                       d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm8-7L4 8v10h16V8zm0-2l8-5H4zM4 8V6v12z" />
@@ -698,52 +698,53 @@
 
   <script>
     function animateValue(id, start, end, duration) {
-        let obj = document.getElementById(id);
-        let range = end - start;
-        let current = start;
-        let increment = end > start ? 2000 : -2000; // Change increment to 2000
-        let stepTime = Math.abs(Math.floor(duration / (range / 2000))); // Adjust step time based on 2000 increments
-        
-        let timer = setInterval(function() {
-            current += increment;
-            obj.innerHTML = current.toLocaleString(); // Format number with commas
-            if (current >= end && increment > 0 || current <= end && increment < 0) {
-                clearInterval(timer);
-            }
-        }, stepTime);
+      let obj = document.getElementById(id);
+      let range = end - start;
+      let current = start;
+      let increment = end > start ? 2000 : -2000; // Change increment to 2000
+      let stepTime = Math.abs(Math.floor(duration / (range / 2000))); // Adjust step time based on 2000 increments
+
+      let timer = setInterval(function () {
+        current += increment;
+        obj.innerHTML = current.toLocaleString(); // Format number with commas
+        if (current >= end && increment > 0 || current <= end && increment < 0) {
+          clearInterval(timer);
+        }
+      }, stepTime);
     }
 
     // Call the animation for 0 to 30,000 over 3 seconds (3000 milliseconds)
-    window.onload = function() {
-        animateValue("running-number", 0, 30000, 3000);
+    window.onload = function () {
+      animateValue("running-number", 0, 30000, 3000);
     };
-</script>
+  </script>
 
-<script>
-  // Get elements
-  const zoomableImage = document.getElementById('zoomableImage');
-  const overlay = document.getElementById('overlay');
-  const fullImage = document.getElementById('fullImage');
-  const closeBtn = document.getElementById('closeBtn');
+  <script>
+    // Get elements
+    const zoomableImage = document.getElementById('zoomableImage');
+    const overlay = document.getElementById('overlay');
+    const fullImage = document.getElementById('fullImage');
+    const closeBtn = document.getElementById('closeBtn');
 
-  // Open the overlay and display the zoomed image
-  zoomableImage.addEventListener('click', () => {
-    overlay.style.display = 'flex';
-    fullImage.src = zoomableImage.src;
-  });
+    // Open the overlay and display the zoomed image
+    zoomableImage.addEventListener('click', () => {
+      overlay.style.display = 'flex';
+      fullImage.src = zoomableImage.src;
+    });
 
-  // Close the overlay when close button is clicked
-  closeBtn.addEventListener('click', () => {
-    overlay.style.display = 'none';
-  });
-
-  // Close the overlay when clicked outside the image
-  overlay.addEventListener('click', (event) => {
-    if (event.target === overlay) {
+    // Close the overlay when close button is clicked
+    closeBtn.addEventListener('click', () => {
       overlay.style.display = 'none';
-    }
-  });
-</script>
+    });
+
+    // Close the overlay when clicked outside the image
+    overlay.addEventListener('click', (event) => {
+      if (event.target === overlay) {
+        overlay.style.display = 'none';
+      }
+    });
+  </script>
 
 </body>
+
 </html>
