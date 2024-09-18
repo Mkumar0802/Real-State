@@ -7,6 +7,8 @@
   <title>Landmark Livings | about</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 
 </head>
@@ -124,7 +126,9 @@
         <p class="mt-4 text-gray-600 xl:w-10/12 lg:text-xl">Landmark Livings is a plots selling platform focused on delivering a seamless and
           efficient experience for buyers. Our services simplify land transactions, ensuring transparency, security, and
           convenience at every step.</p>
-        <button class="px-6 py-2 mt-6 text-white bg-black rounded">Join With Us</button>
+          <a href="./contact.html" class="block">
+            <button class="px-6 py-2 mt-6 text-white bg-black rounded">Join With Us</button>
+          </a>
       </div>
       <!-- Image Section -->
       <div class="flex justify-center mt-8 md:w-1/2 md:mt-0">
@@ -203,16 +207,15 @@
   <div class="mt-6 font-[sans-serif] md:hidden block " x-data="{ 
     currentIndex: 0, 
     testimonials: [ 
-        { name: 'Bhawna', role: 'CEO, Company', image: 'https://readymadeui.com/team-1.webp', feedback: '“This is a customer quote.The customer is going to share ion about our product or service, hopefully it’s going to be a positive one.The social proof section is important when you want to increase trust and trustworthiness of your company with your website visitors”', stars: 5 },
-        { name: 'Ashwin', role: 'CTO, Tech Co', image: 'https://readymadeui.com/team-1.webp', feedback: '“This is a customer quote.The customer is going to share their opinion about our product or service, hopefully it’s going to be a positive one.The social proof section is important when you want to increase trust and trustworthiness of your company with your website visitors”', stars: 4 },
-        { name: 'Archana', role: 'Manager, Enterprise', image: 'https://readymadeui.com/team-1.webp', feedback: '“This is a custo.The customer is going to share their opinion about our product or service, hopefully it’s going to be a positive one.The social proof section is important when you want to increase trust and trustworthiness of your company with your website visitors”', stars: 5 }
+        { name: 'Bhawna', role: 'CEO, Company', image: 'https://readymadeui.com/team-1.webp', feedback: '“Buying a plot with Landmark Livings was smooth and hassle-free. They provided transparent pricing and guided me through the legal process. I\'m confident in my investment and highly recommend them to anyone looking for a reliable real estate partner.”', stars: 5 },
+        { name: 'Ashwin', role: 'CTO, Tech Co', image: 'https://readymadeui.com/team-1.webp', feedback: '“Landmark Livings made my first plot purchase easy and stress-free. They offered clear advice, great value, and flexible payment options. I couldn\'t have asked for a better experience!”', stars: 4 },
+        { name: 'Archana', role: 'Manager, Enterprise', image: 'https://readymadeui.com/team-1.webp', feedback: '“Landmark Livings made plot buying a breeze. Their team was professional, and the process was quick and transparent. I\'m already seeing the value of my investment grow. Highly recommend their services!”', stars: 5 }
     ] 
 }" x-init="setInterval(() => { currentIndex = (currentIndex + 1) % testimonials.length }, 5000)">
 
     <div class="max-w-4xl mx-auto relative">
       <div class="text-center">
         <h2 class="text-gray-800 text-3xl font-extrabold">What our happy clients say</h2>
-        <!-- <p class="text-sm text-gray-800 mt-6 leading-relaxed">Veniam proident aute magna anim excepteur et ex consectetur velit ullamco veniam minim aute sit. Elit occaecat officia et laboris Lorem minim. Officia do aliqua adipisicing ullamco in.</p> -->
       </div>
 
       <div class="max-w-xl mt-16 mx-auto p-5">
@@ -260,7 +263,8 @@
         </svg>
       </div>
     </div>
-  </div>
+</div>
+
 
 
 
@@ -286,18 +290,11 @@
         </div>
 
         <div class="mt-4">
-          <p class="text-sm leading-relaxed text-gray-800">“This is a customer quote.The customer is going to share
-            their opinion about our product or service, hopefully it’s going to be a positive one.The social proof
-            section is important when you want to increase trust and trustworthiness of your company with your website
-            visitors”</p>
+          <p class="text-sm leading-relaxed ">“Buying a plot with Landmark livings was smooth and hassle-free. They provided transparent pricing and guided me through the legal process. I'm confident in my investment and highly recommend them to anyone looking for a reliable real estate partner”</p>
         </div>
 
         <div class="flex justify-center space-x-1 mt-4">
-          <svg class="w-4 fill-[#facc15" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-          </svg>
-          <svg class="w-4 fill-[#facc15" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
           </svg>
@@ -305,11 +302,15 @@
             <path
               d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
           </svg>
-          <svg class="w-4 fill-[#CED5D8]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
           </svg>
-          <svg class="w-4 fill-[#CED5D8]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+          </svg>
+          <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
           </svg>
@@ -327,10 +328,7 @@
         </div>
 
         <div class="mt-4">
-          <p class="text-sm leading-relaxed text-gray-800">“This is a customer quote.The customer is going to share
-            their opinion about our product or service, hopefully it’s going to be a positive one.The social proof
-            section is important when you want to increase trust and trustworthiness of your company with your website
-            visitors”</p>
+          <p class="text-sm leading-relaxed ">“Landmark Livings made my first plot purchase easy and stress-free. They offered clear advice, great value, and flexible payment options. I couldn't have asked for a better experience!"”</p>
         </div>
 
         <div class="flex justify-center space-x-1 mt-4">
@@ -362,16 +360,13 @@
           <img src="https://readymadeui.com/team-4.webp"
             class="w-24 h-24 rounded-full shadow-xl border-2 border-white" />
           <div class="mt-4">
-            <h4 class="text-sm font-extrabold text-gray-800">B.Deepak</h4>
+            <h4 class="text-sm font-extrabold text-gray-800">B.Deepthi</h4>
             <!-- <p class="text-xs text-blue-600 font-bold mt-1">CEO, Company</p> -->
           </div>
         </div>
 
         <div class="mt-4">
-          <p class="text-sm leading-relaxed text-gray-800">“This is a customer quote.The customer is going to share
-            their opinion about our product or service, hopefully it’s going to be a positive one.The social proof
-            section is important when you want to increase trust and trustworthiness of your company with your website
-            visitors”</p>
+          <p class="text-sm leading-relaxed">“Landmark Livings made plot buying a breeze. Their team was professional, and the process was quick and transparent. I'm already seeing the value of my investment grow. Highly recommend their services!"”</p>
         </div>
 
         <div class="flex justify-center space-x-1 mt-4">
@@ -503,6 +498,8 @@
 
 
 
+
+  
   <!-- md devices -->
 
   <footer class="bg-white hidden md:block">
@@ -536,7 +533,7 @@
             </li>
 
             <li>
-              <a href="#" rel="noreferrer" target="_blank" class="text-gray-700 transition hover:opacity-75">
+              <a href="https://www.instagram.com/landmark_livings_trichy/?igsh=aDFheTI0aXh5azJn" rel="noreferrer" target="_blank" class="text-gray-700 transition hover:opacity-75">
                 <span class="sr-only">Instagram</span>
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 256 256">
@@ -607,12 +604,12 @@
                     <path fill="#F5841A "
                       d="M12 12q.825 0 1.413-.587T14 10t-.587-1.412T12 8t-1.412.588T10 10t.588 1.413T12 12m0 10q-4.025-3.425-6.012-6.362T4 10.2q0-3.75 2.413-5.975T12 2t5.588 2.225T20 10.2q0 2.5-1.987 5.438T12 22" />
                   </svg></span>
-                <a href="#" class="text-gray-700 transition hover:opacity-75"> Address : </a>
+                <a href="#" class="text-gray-700 transition hover:opacity-75"> Address  </a>
 
 
               </li>
 
-              <li class="my-4"><span>7/2, Vathukkara Street, Woraiyur
+              <li class="my-2"><span>7/2, Vathukkara Street, Woraiyur,
                   <br />Trichy - 620003</span></li>
 
               <li class="flex gap-2 ">
@@ -622,7 +619,7 @@
                       d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm8-7L4 8v10h16V8zm0-2l8-5H4zM4 8V6v12z" />
                   </svg>
                 </span>
-                <a href="#" class="text-gray-700 transition hover:opacity-75"> Mail Us : </a>
+                <a href="#" class="text-gray-700 transition hover:opacity-75"> Mail Us  </a>
               </li>
 
               <li>
@@ -681,7 +678,7 @@
             </li>
 
             <li>
-              <a href="#" rel="noreferrer" target="_blank" class="text-gray-700 transition hover:opacity-75">
+              <a href="https://www.instagram.com/landmark_livings_trichy/?igsh=aDFheTI0aXh5azJn" rel="noreferrer" target="_blank" class="text-gray-700 transition hover:opacity-75">
                 <span class="sr-only">Instagram</span>
                 <ion-icon class="text-[40px] text-[#c13584]" name="logo-instagram"></ion-icon>
 
@@ -726,12 +723,12 @@
                     <path fill="#F5841A "
                       d="M12 12q.825 0 1.413-.587T14 10t-.587-1.412T12 8t-1.412.588T10 10t.588 1.413T12 12m0 10q-4.025-3.425-6.012-6.362T4 10.2q0-3.75 2.413-5.975T12 2t5.588 2.225T20 10.2q0 2.5-1.987 5.438T12 22" />
                   </svg></span>
-                <a href="#" class="text-gray-700 transition hover:opacity-75"> Address : </a>
+                <a href="#" class="text-gray-700 transition hover:opacity-75"> Address  </a>
 
 
               </li>
 
-              <li class="my-4"><span>7/2, Vathukkara Street, Woraiyur
+              <li class="my-1"><span>7/2, Vathukkara Street, Woraiyur,
                   <br />Trichy - 620003</span></li>
 
               <li class="flex gap-2 ">
@@ -741,7 +738,7 @@
                       d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm8-7L4 8v10h16V8zm0-2l8-5H4zM4 8V6v12z" />
                   </svg>
                 </span>
-                <a href="#" class="text-gray-700 transition hover:opacity-75"> Mail Us : </a>
+                <a href="#" class="text-gray-700 transition hover:opacity-75"> Mail Us </a>
               </li>
 
               <li>
@@ -771,13 +768,12 @@
 
 
 
-
   <script>
     function testimonialSlider() {
       return {
         activeTestimonial: 0,
         testimonials: [
-          { name: 'S.Bhawna', image: 'https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80', feedback: '“This is a customer quote.The customer is going to share their bout our product or service, hopefully it’s going to be a positive one.The social proof section is important when you want to increase trust and trustworthiness of your company with your website visitors”' },
+          { name: 'S.Bhawna', image: 'https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80', feedback: '“”' },
           { name: 'B.Deepak', image: 'https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80', feedback: '“This is a customer quote.The customer is going to share their opinion about our product or service, hopefully it’s going to be a positive one.The social proof section is important when you want to increase trust and trustworthiness of your company with your website visitors”' },
           { name: 'S.Archana', image: 'https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80', feedback: '“This is a customer quote.The customer is going to share their opinion about our product or hopefully it’s going to be a positive one.The social proof section is important when you want to increase trust and trustworthiness of your company with your website visitors”' },
           { name: 'R.Manish', image: 'https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80', feedback: '“This is a customer quote.The customer is going to share their opinion about our product or service, hopefully it’s going toive one.The social proof section is important when you want to increase trust and trustworthiness of your company with your website visitors”' }

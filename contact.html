@@ -7,6 +7,8 @@
   <title>Contact Us</title>
   <script src="./tailwindcss.css"></script>
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body class="">
@@ -14,103 +16,110 @@
   <nav>
     <div class="bg-white">
       <div class="xl:container py-5 xl:mx-auto px-8">
-            <div class="relative flex items-center justify-between">
-                <a href="/" aria-label="Company" title="Company" class="inline-flex items-center">
-                  <img src='./Assests/Assetlogo.png' class="xl:w-1/6 :h-1/6  w-4/12 " />
-                </a>
-                
-                <!-- Desktop Menu -->
-                <ul class="flex items-center hidden space-x-8 lg:flex font-semibold text-[20px]">
-                    <li>
-                        <a href="/" aria-label="Home" title="Home"
-                            class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400">Home</a>
-                    </li>
-                    <li>
-                      <a href="/about.html" aria-label="Our product" title="Our product"
-                        class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400 text-nowrap">About
-                        Us</a>
-                    </li>
-                    <li>
-                        <a href="./approval.html" aria-label="Approval" title="Approval"
-                            class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400">Approval</a>
-                    </li>
-                    <li>
-                        <a href="./project.html" aria-label="Projects" title="Projects"
-                            class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400">Projects</a>
-                    </li>
-                    <li>
-                        <a href="/contact.html" aria-label="Projects" title="Projects"
-                            class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400">Contact</a>
-                    </li>
-                </ul>
+        <div class="relative flex items-center justify-between">
+          <a href="/" aria-label="Company" title="Company" class="inline-flex items-center">
+            <img src='./Assests/Assetlogo.png' class="xl:w-1/6 :h-1/6  w-4/12 " />
+          </a>
 
-                <!-- Mobile Menu Button -->
-                <div class="lg:hidden" x-data="{ open: false }">
-                    <button @click="open = !open" aria-label="Open Menu" title="Open Menu"
-                        class="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline">
-                        <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z">
-                            </path>
-                            <path fill="currentColor"
-                                d="M23,6H1C0.4,6,0,5.6,0,5s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,6,23,6z">
-                            </path>
-                            <path fill="currentColor"
-                                d="M23,20H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,20,23,20z">
-                            </path>
-                        </svg>
+          <!-- Desktop Menu -->
+          <ul class="flex items-center hidden space-x-8 lg:flex font-semibold text-[20px]">
+            <li>
+              <a href="/" aria-label="Home" title="Home"
+                class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400">Home</a>
+            </li>
+            <li>
+              <a href="/about.html" aria-label="Our product" title="Our product"
+                class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400 text-nowrap">About
+                Us</a>
+            </li>
+            <li>
+              <a href="./approval.html" aria-label="Approval" title="Approval"
+                class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400">Approval</a>
+            </li>
+            <li>
+              <a href="./project.html" aria-label="Projects" title="Projects"
+                class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400">Projects</a>
+            </li>
+            <li>
+              <a href="/contact.html" aria-label="Projects" title="Projects"
+                class="font-medium tracking-wide text-black transition-colors duration-200 hover:text-teal-accent-400">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Mobile Menu Button -->
+          <div class="lg:hidden" x-data="{ open: false }">
+            <button @click="open = !open" aria-label="Open Menu" title="Open Menu"
+              class="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline">
+              <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z">
+                </path>
+                <path fill="currentColor" d="M23,6H1C0.4,6,0,5.6,0,5s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,6,23,6z">
+                </path>
+                <path fill="currentColor" d="M23,20H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,20,23,20z">
+                </path>
+              </svg>
+            </button>
+
+            <!-- Mobile Menu Dropdown -->
+            <div x-show="open" @click.away="open = false" x-transition class="absolute top-0 left-0 w-full">
+              <div class="p-5 bg-white border rounded shadow-sm">
+                <div class="flex items-center justify-between mb-4">
+                  <div>
+                    <a href="/" aria-label="Company" title="Company" class="inline-flex items-center">
+                      <img src='./Assests/Assetlogo.png' class="w-1/6 h-1/6" />
+                    </a>
+                  </div>
+                  <div>
+                    <button @click="open = false" aria-label="Close Menu" title="Close Menu"
+                      class="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+                      <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                          d="M19.7,4.3c-0.4-0.4-1-0.4-1.4,0L12,10.6L5.7,4.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l6.3,6.3l-6.3,6.3 c-0.4,0.4-0.4,1,0,1.4C4.5,19.9,4.7,20,5,20s0.5-0.1,0.7-0.3l6.3-6.3l6.3,6.3c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3 c0.4-0.4,0.4-1,0-1.4L13.4,12l6.3-6.3C20.1,5.3,20.1,4.7,19.7,4.3z">
+                        </path>
+                      </svg>
                     </button>
-
-                    <!-- Mobile Menu Dropdown -->
-                    <div x-show="open" @click.away="open = false" x-transition class="absolute top-0 left-0 w-full">
-                        <div class="p-5 bg-white border rounded shadow-sm">
-                            <div class="flex items-center justify-between mb-4">
-                                <div>
-                                    <a href="/" aria-label="Company" title="Company" class="inline-flex items-center">
-                                        <img src='./Assests/Assetlogo.png' class="w-1/6 h-1/6" />
-                                    </a>
-                                </div>
-                                <div>
-                                    <button @click="open = false" aria-label="Close Menu" title="Close Menu"
-                                        class="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
-                                        <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
-                                            <path fill="currentColor"
-                                                d="M19.7,4.3c-0.4-0.4-1-0.4-1.4,0L12,10.6L5.7,4.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l6.3,6.3l-6.3,6.3 c-0.4,0.4-0.4,1,0,1.4C4.5,19.9,4.7,20,5,20s0.5-0.1,0.7-0.3l6.3-6.3l6.3,6.3c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3 c0.4-0.4,0.4-1,0-1.4L13.4,12l6.3-6.3C20.1,5.3,20.1,4.7,19.7,4.3z">
-                                            </path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <nav>
-                                <ul class="space-y-4">
-                                    <li><a href="/" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-teal-500">Home</a></li>
-                                    <li><a href="/about.html" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-teal-500">About Us</a></li>
-                                    <li><a href="./approval.html" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-teal-500">Approval</a></li>
-                                    <li><a href="./project.html" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-teal-500">Projects</a></li>
-                                    <li><a href="/contact.html" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-teal-500">Contact</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
+                  </div>
                 </div>
-
+                <nav>
+                  <ul class="space-y-4">
+                    <li><a href="/"
+                        class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-teal-500">Home</a>
+                    </li>
+                    <li><a href="/about.html"
+                        class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-teal-500">About
+                        Us</a></li>
+                    <li><a href="./approval.html"
+                        class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-teal-500">Approval</a>
+                    </li>
+                    <li><a href="./project.html"
+                        class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-teal-500">Projects</a>
+                    </li>
+                    <li><a href="/contact.html"
+                        class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-teal-500">Contact</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
             </div>
+          </div>
+
         </div>
+      </div>
     </div>
-</nav>
+  </nav>
 
 
   <div class="flex items-center justify-center bg-white">
 
 
     <div class="w-full p-8 lg:px-24 px-8 bg-white">
-      <div >
+      <div>
         <div class="lg:flex justify-center">
           <h2 class="mb-4 text-2xl font-bold">Contact Us</h2>
         </div>
         <div>
 
-          <div class ="flex justify-center">
+          <div class="flex justify-center">
             <p class="mb-6 text-gray-600 ">
               For sales-related inquiries, including information about available plots, pricing, financing options, and
               site visits, please contact us.
@@ -157,7 +166,7 @@
                   required>
               </div>
               <button type="submit"
-                class="w-1/4 px-4 py-2 font-bold text-white bg-green-500 rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50">
+                class="w-1/4 md:px-4 md:py-2 px-2 py-2 font-bold text-white bg-green-500 rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50">
                 Submit
               </button>
           </div>
@@ -169,7 +178,8 @@
       </div>
     </div>
   </div>
- 
+
+
 
 
 
@@ -207,7 +217,7 @@
             </li>
 
             <li>
-              <a href="#" rel="noreferrer" target="_blank" class="text-gray-700 transition hover:opacity-75">
+              <a href="https://www.instagram.com/landmark_livings_trichy/?igsh=aDFheTI0aXh5azJn" rel="noreferrer" target="_blank" class="text-gray-700 transition hover:opacity-75">
                 <span class="sr-only">Instagram</span>
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 256 256">
@@ -278,12 +288,12 @@
                     <path fill="#F5841A "
                       d="M12 12q.825 0 1.413-.587T14 10t-.587-1.412T12 8t-1.412.588T10 10t.588 1.413T12 12m0 10q-4.025-3.425-6.012-6.362T4 10.2q0-3.75 2.413-5.975T12 2t5.588 2.225T20 10.2q0 2.5-1.987 5.438T12 22" />
                   </svg></span>
-                <a href="#" class="text-gray-700 transition hover:opacity-75"> Address : </a>
+                <a href="#" class="text-gray-700 transition hover:opacity-75"> Address  </a>
 
 
               </li>
 
-              <li class="my-4"><span>7/2, Vathukkara Street, Woraiyur
+              <li class="my-2"><span>7/2, Vathukkara Street, Woraiyur,
                   <br />Trichy - 620003</span></li>
 
               <li class="flex gap-2 ">
@@ -293,7 +303,7 @@
                       d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm8-7L4 8v10h16V8zm0-2l8-5H4zM4 8V6v12z" />
                   </svg>
                 </span>
-                <a href="#" class="text-gray-700 transition hover:opacity-75"> Mail Us : </a>
+                <a href="#" class="text-gray-700 transition hover:opacity-75"> Mail Us  </a>
               </li>
 
               <li>
@@ -352,7 +362,7 @@
             </li>
 
             <li>
-              <a href="#" rel="noreferrer" target="_blank" class="text-gray-700 transition hover:opacity-75">
+              <a href="https://www.instagram.com/landmark_livings_trichy/?igsh=aDFheTI0aXh5azJn" rel="noreferrer" target="_blank" class="text-gray-700 transition hover:opacity-75">
                 <span class="sr-only">Instagram</span>
                 <ion-icon class="text-[40px] text-[#c13584]" name="logo-instagram"></ion-icon>
 
@@ -397,12 +407,12 @@
                     <path fill="#F5841A "
                       d="M12 12q.825 0 1.413-.587T14 10t-.587-1.412T12 8t-1.412.588T10 10t.588 1.413T12 12m0 10q-4.025-3.425-6.012-6.362T4 10.2q0-3.75 2.413-5.975T12 2t5.588 2.225T20 10.2q0 2.5-1.987 5.438T12 22" />
                   </svg></span>
-                <a href="#" class="text-gray-700 transition hover:opacity-75"> Address : </a>
+                <a href="#" class="text-gray-700 transition hover:opacity-75"> Address  </a>
 
 
               </li>
 
-              <li class="my-4"><span>7/2, Vathukkara Street, Woraiyur
+              <li class="my-1"><span>7/2, Vathukkara Street, Woraiyur,
                   <br />Trichy - 620003</span></li>
 
               <li class="flex gap-2 ">
@@ -412,7 +422,7 @@
                       d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm8-7L4 8v10h16V8zm0-2l8-5H4zM4 8V6v12z" />
                   </svg>
                 </span>
-                <a href="#" class="text-gray-700 transition hover:opacity-75"> Mail Us : </a>
+                <a href="#" class="text-gray-700 transition hover:opacity-75"> Mail Us </a>
               </li>
 
               <li>
@@ -434,7 +444,6 @@
 
     </div>
   </footer>
-
 
 
 

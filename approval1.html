@@ -7,6 +7,8 @@
   <title>Landmark Livings Elite</title>
   <script src="./tailwindcss.css"></script>
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <style>
     /* Style for the container */
     .image-container {
@@ -169,9 +171,9 @@
           <br />
           <span class="lg:text-4xl text-2xl">of Developed Plot</span>
         </p>
-        <a href="#"
+        <button onclick="scrolldiv()"
           class="inline-block lg:px-6 lg:py-3   px-8   py-2  mt-6 font-semibold text-black bg-white rounded-lg">Choose
-          Plots</a>
+          Plots</button>
       </div>
     </div>
   </section>
@@ -187,7 +189,7 @@
 
 
 
-  <section class="container py-12 mx-auto">
+  <section id="ele" class="container py-12 mx-auto">
     <div class="flex justify-center">
       <img src="https://res.cloudinary.com/dc6wggob7/image/upload/v1725698081/Desktop_-_4_ffo3dt.png" alt="Plot Map"
         class="">
@@ -391,7 +393,6 @@
   
 
 
-
   <!-- md devices -->
 
   <footer class="bg-white hidden md:block">
@@ -425,7 +426,7 @@
             </li>
 
             <li>
-              <a href="#" rel="noreferrer" target="_blank" class="text-gray-700 transition hover:opacity-75">
+              <a href="https://www.instagram.com/landmark_livings_trichy/?igsh=aDFheTI0aXh5azJn" rel="noreferrer" target="_blank" class="text-gray-700 transition hover:opacity-75">
                 <span class="sr-only">Instagram</span>
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 256 256">
@@ -496,12 +497,12 @@
                     <path fill="#F5841A "
                       d="M12 12q.825 0 1.413-.587T14 10t-.587-1.412T12 8t-1.412.588T10 10t.588 1.413T12 12m0 10q-4.025-3.425-6.012-6.362T4 10.2q0-3.75 2.413-5.975T12 2t5.588 2.225T20 10.2q0 2.5-1.987 5.438T12 22" />
                   </svg></span>
-                <a href="#" class="text-gray-700 transition hover:opacity-75"> Address : </a>
+                <a href="#" class="text-gray-700 transition hover:opacity-75"> Address  </a>
 
 
               </li>
 
-              <li class="my-4"><span>7/2, Vathukkara Street, Woraiyur
+              <li class="my-2"><span>7/2, Vathukkara Street, Woraiyur,
                   <br />Trichy - 620003</span></li>
 
               <li class="flex gap-2 ">
@@ -511,7 +512,7 @@
                       d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm8-7L4 8v10h16V8zm0-2l8-5H4zM4 8V6v12z" />
                   </svg>
                 </span>
-                <a href="#" class="text-gray-700 transition hover:opacity-75"> Mail Us : </a>
+                <a href="#" class="text-gray-700 transition hover:opacity-75"> Mail Us  </a>
               </li>
 
               <li>
@@ -570,7 +571,7 @@
             </li>
 
             <li>
-              <a href="#" rel="noreferrer" target="_blank" class="text-gray-700 transition hover:opacity-75">
+              <a href="https://www.instagram.com/landmark_livings_trichy/?igsh=aDFheTI0aXh5azJn" rel="noreferrer" target="_blank" class="text-gray-700 transition hover:opacity-75">
                 <span class="sr-only">Instagram</span>
                 <ion-icon class="text-[40px] text-[#c13584]" name="logo-instagram"></ion-icon>
 
@@ -615,12 +616,12 @@
                     <path fill="#F5841A "
                       d="M12 12q.825 0 1.413-.587T14 10t-.587-1.412T12 8t-1.412.588T10 10t.588 1.413T12 12m0 10q-4.025-3.425-6.012-6.362T4 10.2q0-3.75 2.413-5.975T12 2t5.588 2.225T20 10.2q0 2.5-1.987 5.438T12 22" />
                   </svg></span>
-                <a href="#" class="text-gray-700 transition hover:opacity-75"> Address : </a>
+                <a href="#" class="text-gray-700 transition hover:opacity-75"> Address  </a>
 
 
               </li>
 
-              <li class="my-4"><span>7/2, Vathukkara Street, Woraiyur
+              <li class="my-1"><span>7/2, Vathukkara Street, Woraiyur,
                   <br />Trichy - 620003</span></li>
 
               <li class="flex gap-2 ">
@@ -630,7 +631,7 @@
                       d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm8-7L4 8v10h16V8zm0-2l8-5H4zM4 8V6v12z" />
                   </svg>
                 </span>
-                <a href="#" class="text-gray-700 transition hover:opacity-75"> Mail Us : </a>
+                <a href="#" class="text-gray-700 transition hover:opacity-75"> Mail Us </a>
               </li>
 
               <li>
@@ -658,10 +659,17 @@
 
 
 
-
-
-
   <script>
+    function formatIndianCurrency(value) {
+      value = value.toString();
+      let lastThree = value.substring(value.length - 3);
+      let otherNumbers = value.substring(0, value.length - 3);
+      if (otherNumbers !== '') {
+        lastThree = ',' + lastThree;
+      }
+      return  otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree;
+    }
+
     function animateValue(id, start, end, duration) {
       let obj = document.getElementById(id);
       let range = end - start;
@@ -671,18 +679,26 @@
 
       let timer = setInterval(function () {
         current += increment;
-        obj.innerHTML = current.toLocaleString(); // Format number with commas
+        obj.innerHTML = formatIndianCurrency(current); // Format number with Indian currency
         if (current >= end && increment > 0 || current <= end && increment < 0) {
           clearInterval(timer);
         }
       }, stepTime);
     }
 
-    // Call the animation for 0 to 30,000 over 3 seconds (3000 milliseconds)
+    // Call the animation for 0 to 1,20,000 over 3 seconds (3000 milliseconds)
     window.onload = function () {
-      animateValue("running-number", 0, 30000, 3000);
+      animateValue("running-number", 0, 120000, 3000);
     };
-  </script>
+</script>
+
+<div id="running-number"></div>
+
+ 
+  
+  
+
+
 
   <script>
     // Get elements
@@ -709,6 +725,20 @@
       }
     });
   </script>
+
+
+<script>
+  function scrolldiv() {
+      var elem = document
+          .getElementById("ele");
+      elem
+          .scrollIntoView();
+  }
+</script>
+
+
+
+
 
 </body>
 
